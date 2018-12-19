@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
 
   get '/dashboard', to: 'users#show'
+
+  resources :topics, only: [:show]
 end

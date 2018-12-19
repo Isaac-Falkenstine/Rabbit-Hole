@@ -6,8 +6,12 @@ class UserDashboardFacade
     @user = user
   end
 
-  def topics
-    user.topics
+  def complete_topics
+    user.topics.where(complete: true)
+  end
+
+  def in_progress_topics
+    user.topics.where(complete: false)
   end
 
   def questions
