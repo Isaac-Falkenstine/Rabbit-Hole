@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2018_12_19_001718) do
     t.bigint "user_id"
     t.string "title"
     t.string "goal"
-    t.boolean "complete"
+    t.boolean "complete", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_topics_on_user_id"

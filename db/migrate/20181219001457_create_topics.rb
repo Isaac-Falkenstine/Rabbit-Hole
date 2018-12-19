@@ -4,7 +4,7 @@ class CreateTopics < ActiveRecord::Migration[5.2]
       t.references :user, foreign_key: true
       t.string :title
       t.string :goal
-      t.boolean :complete
+      t.boolean :complete, default: false
 
       t.timestamps
     end
