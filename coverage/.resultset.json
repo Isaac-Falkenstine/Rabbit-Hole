@@ -1,0 +1,58 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/isaacfalkenstine/turing/3module/projects/rabbit-hole/app/models/link.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/isaacfalkenstine/turing/3module/projects/rabbit-hole/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/isaacfalkenstine/turing/3module/projects/rabbit-hole/app/models/question.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/isaacfalkenstine/turing/3module/projects/rabbit-hole/app/models/token.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/isaacfalkenstine/turing/3module/projects/rabbit-hole/app/models/topic.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/isaacfalkenstine/turing/3module/projects/rabbit-hole/app/models/user.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1545186453
+  }
+}
