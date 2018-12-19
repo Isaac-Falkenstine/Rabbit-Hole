@@ -51,6 +51,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
+  gem 'pry'
 end
 
 group :development do
