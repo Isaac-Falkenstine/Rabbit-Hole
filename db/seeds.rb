@@ -8,7 +8,7 @@
 user = User.create(first_name: "Ian", last_name: "Carter", password: "password", email: "example@email.com")
 
 topic_1 = Topic.create(title: "How to make a Youtube video",
-                    goal: "To create a well edited Youtube video that I can be proud of",
+                    goal: "To create a well edited Youtube video that I can be proud of.",
                     complete: true,
                     user_id: user.id)
 
