@@ -3,7 +3,7 @@ require "rails_helper"
 describe 'As a visitor' do
   it 'I can register using Google Oauth' do
     visit '/'
-    click_on "Register"
+    click_on "Register with Google"
 
     
   end
