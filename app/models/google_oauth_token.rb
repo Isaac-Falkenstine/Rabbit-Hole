@@ -1,0 +1,2 @@
+class GoogleOauthToken < ApplicationRecord
+end
