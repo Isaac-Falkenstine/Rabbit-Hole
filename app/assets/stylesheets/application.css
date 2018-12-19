@@ -14,6 +14,128 @@
  *= require_self
  */
 
+ .container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 2px;
+}
+
+.item1 {
+  background: rgb(26, 26, 26);
+  grid-column: span 6;
+  width: 1182px;
+  height: 55px;
+  left: 0px;
+  top: 0px;
+  background: #89AFF9;
+}
+
+.login{
+  grid-column: span 1;
+  width: 154px;
+  height: 55px;
+  left: 857px;
+  top: 0px;
+  background: #C8ECF7;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+.signup{
+  background: darkblue;
+  grid-column: span 1;
+  width: 154px;
+  height: 55px;
+  left: 1028px;
+  top: 0px;
+  background: #C8ECF7;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}   
+
+.item3:hover {
+  cursor: pointer; 
+  opacity: .5;
+}
+
+.item4:hover {
+  cursor: pointer; 
+  opacity: .5;
+}
+
+.item5:hover {
+  cursor: pointer; 
+  opacity: .5;
+}
+
+.item2:hover {
+  cursor: pointer; 
+  opacity: .5;
+}
+
+.item2,
+.item3,
+.item4,
+.item5{
+
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+.item4{
+  background: darkblue;
+  grid-column: span 2;
+  color: white;
+  text-align: center;
+}
+.item5{
+  background: darkblue;
+  grid-column: span 3;
+  color: white;
+  text-align: center;
+}
+.item6{
+  grid-column: span 8;
+  height: 480px;
+  background-size: cover;
+  background-image: url("../images/dam.png");
+}
+.item7{
+  background: rgb(26, 26, 26);
+  grid-column: span 8;
+  height: 180px;
+  color: whitesmoke;
+  text-align: center;
+}
+.item8{
+  grid-column: span 3;
+  height: 300px;
+  background-image: url("../images/2.jpg");
+  background-size: cover;
+}
+.item9{
+  grid-column: span 2;
+  height: 300px;
+  background-image: url("../images/5.jpg");
+  background-size: cover;
+}
+.item10{
+  grid-column: span 3;
+  height: 300px;
+  background-image: url("../images/6.jpg");
+  background-size: cover;
+}
+.footer {
+  background: rgb(26, 26, 26);
+  grid-column: span 8;
+  position: absolute;
+  width: 1182px;
+  height: 55px;
+  left: 0px;
+  top: 506px;
+  background: #89AFF9;
+}
+
 
  .search_bar {
 
@@ -48,7 +170,6 @@
 }
 
 .sign_up_button {
-  position: absolute;
   width: 154px;
   height: 55px;
   left: 1028px;
