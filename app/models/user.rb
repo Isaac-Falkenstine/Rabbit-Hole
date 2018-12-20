@@ -13,10 +13,10 @@ class User < ApplicationRecord
   has_secure_password validations: false
 
   def self.from_omniauth(data)
-    where(email: data.info.email).first_or_initialize do |user|
-      user.first_name = data.info.first_name
-      user.last_name = data.info.last_name
-      user.email = data.info.email
+    where(email: data["info"]["email"]).first_or_initialize do |user|
+      user.first_name = data["info"]["first_name"]
+      user.last_name = data["info"]["last_name"]
+      user.email = data["info"]["email"]
     end
   end
 end

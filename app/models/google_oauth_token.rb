@@ -1,11 +1,7 @@
 class GoogleOauthToken < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, dependent: :destroy
 
-<<<<<<< HEAD
-  validates_presence_of :tokenx
-=======
   validates_presence_of :token
->>>>>>> master
                         :refresh_token
 
   validates :user_id, uniqueness: true

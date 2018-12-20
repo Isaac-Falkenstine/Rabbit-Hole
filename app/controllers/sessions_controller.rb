@@ -1,10 +1,7 @@
 
 class SessionsController < ApplicationController
   def new
-    if current_user
-      flash[:notice] = "User is already logged in"
-      redirect_to(dashboard_path)
-    end
+
   end
 
   def create
@@ -14,7 +11,7 @@ class SessionsController < ApplicationController
       redirect_to dashboard_path
     else
       flash[:error] = "Looks like your email or password is invalid"
-      render :new
+      redirect_to login_path
     end
   end
 
