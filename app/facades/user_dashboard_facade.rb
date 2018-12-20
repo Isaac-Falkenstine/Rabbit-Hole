@@ -13,10 +13,4 @@ class UserDashboardFacade
   def in_progress_topics
     user.topics.where(complete: false)
   end
-
-  def questions
-    topics.map do |topic|
-      topic.questions
-    end
-  end
 end
