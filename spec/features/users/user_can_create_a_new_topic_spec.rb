@@ -24,17 +24,12 @@ describe "User can create a new topic" do
 
     fill_in "topic[goal]", with: "Either apply for disability or rule it out as an option."
 
-    text_3 = "What is one specific question you have to get started?"
-
-    expect(page).to have_content(text_3)
-
-    fill_in "topic[questions]", with: "Do I need a lawyer?"
-
     click_on "Create New Topic"
 
     topic = Topic.last
 
     expect(current_path).to eq(topic_path(topic))
 
+    expect(page).to have_content(topic.title)
   end
 end

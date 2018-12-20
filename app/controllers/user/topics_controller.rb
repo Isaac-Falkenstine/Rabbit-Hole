@@ -8,10 +8,10 @@ class User::TopicsController < ApplicationController
     user = User.find(params[:format])
     topic = user.topics.create!(topic_params)
     if topic.save
-      topics.questions.create!(question_params) if !question_params.empty?
-      redirect_to topic_path
+      flash[:notice] = "Topic created"
+      redirect_to topic_path(topic)
     else
-      flash[:error] = "Topic couldn't be save"
+      flash[:error] = "Topic couldn't be save, fill all the forms"
     end
   end
 
@@ -19,9 +19,5 @@ class User::TopicsController < ApplicationController
 
   def topic_params
     params.require(:topic).permit(:title, :goal)
-  end
-
-  def question_params
-    params.require(:question).permit(:questions)
   end
 end
