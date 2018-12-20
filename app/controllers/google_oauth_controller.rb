@@ -4,9 +4,9 @@ class GoogleOauthController < ApplicationController
 
   def update
     data = request.env["omniauth.auth"]
-    refresh_token = data.credentials.refresh_token
     user = User.from_omniauth(data)
-    if user
+    refresh_token = data.credentials.refresh_token
+    if user.id != nil
       session[:user_id] = user.id
       user.google_oauth_token.update(refresh_token: refresh_token) if refresh_token.present?
       flash[:notice] = "You have successfully logged in!"
@@ -21,5 +21,4 @@ class GoogleOauthController < ApplicationController
       redirect_to root_path
     end
   end
-
 end
