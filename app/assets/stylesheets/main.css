@@ -1,0 +1,36 @@
+body {
+  font-family: Ubuntu, sans-serif;
+  font-size:1em;
+  color:#404040;
+  margin:0;
+  padding:0;
+  background-color: #efefef;
+  background-size: contain;
+  text-align:center;
+}
+
+header {
+  background-size: contain;
+  text-align:center;
+  background-color: #68849C;
+  color:#404040;
+}
+
+.overlay_container{
+  padding:15px 10%;
+  background-color: rgba(0,0,0,0.25)
+}
+p > a, li > a, h2 > a, h3 > a, h4 > a {
+  display:inline;
+}
+/* Footer Styles */
+footer {
+  background-size: contain;
+  color: #68849C;
+  text-align:center;
+}
+
+footer .overlay_container {
+  padding:15px 10%;
+  align-items: center;
+}

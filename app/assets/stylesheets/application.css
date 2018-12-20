@@ -1,3 +1,4 @@
+/* <<<<<<< HEAD
 *{
 	box-sizing: border-box;
 	margin:0;
@@ -41,14 +42,14 @@
 	height:50px;
 	margin: 0px auto;
 	position: absolute;
-    left: 50%;
+    /* left: 50%;
     transform: translate(-50%, 0);
     top: 100px;
     box-shadow: 5px 10px grey;
     font-size:25px;
 } */
 
-.spacer {
+/* .spacer {
 	height: 60px;
 	width: 100%;
 }
@@ -62,5 +63,22 @@ button{
 }
 .signup-button{
 	margin-left:3px;
-}
+} */
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
 
