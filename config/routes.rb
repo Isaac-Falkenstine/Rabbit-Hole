@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
+
   get "auth/:provider/callback", to: "google_oauth#update"
   get "auth/failure", to: redirect("/")
 
@@ -13,4 +14,5 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create]
 
+  resources :topics, only: [:show]
 end
