@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>RabbitHole</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,7 +10,12 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-
+  <header>
+    <div class="overlay_container">
+    <h1>The Rabbit Hole</h1>
+    <p>"You will never know less than you know right now." ~ Sandi Metz</p>
+    </div>
+  </header>
 
   <body>
 
@@ -21,5 +27,12 @@
 
     <%= yield %>
 
+    <footer>
+      <div class="overlay_container">
+      <p>Brought to you by Amy, Cesar, Isaac, & Melvin</p>
+      </div>
+    </footer>
+
   </body>
+
 </html>

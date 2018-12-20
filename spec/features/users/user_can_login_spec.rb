@@ -9,16 +9,16 @@ describe "User can log in the APP" do
 
     visit '/'
 
-    click_on "Sign In"
+    click_on "Login"
 
     expect(current_path).to eq(login_path)
 
     fill_in 'session[email]', with: email
     fill_in 'session[password]', with: password
 
-    click_on "Sign In"
-    
+    click_on "Login"
+
     expect(current_path).to eq(dashboard_path)
-    # expect(page).to have_content("#{user.first_name} #{user.last_name}")
+    expect(page).to have_content("#{user.first_name} #{user.last_name}")
   end
 end

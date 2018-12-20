@@ -5,29 +5,24 @@ body {
   margin:0;
   padding:0;
   background-color: #efefef;
+  background-size: contain;
+  text-align:center;
 }
 
-/* Header Styles */
 header {
   background-size: contain;
   text-align:center;
-  color: #68849C;
-  height: 200px;
+  background-color: #68849C;
+  color:#404040;
 }
 
 .overlay_container{
   padding:15px 10%;
   background-color: rgba(0,0,0,0.25)
 }
-
-header h1 a {
-  color: #a7b37d;
+p > a, li > a, h2 > a, h3 > a, h4 > a {
+  display:inline;
 }
-
-header a:hover {
-  color:#8ba22f;
-}
-
 /* Footer Styles */
 footer {
   background-size: contain;
@@ -36,7 +31,6 @@ footer {
 }
 
 footer .overlay_container {
-  height: 150px;
-  display: flex;
+  padding:15px 10%;
   align-items: center;
 }
