@@ -11,6 +11,7 @@ describe "User can log in the APP" do
 
     click_on "Login"
 
+
     expect(current_path).to eq(login_path)
 
     fill_in 'session[email]', with: email
