@@ -9,7 +9,7 @@ describe "User can log in the APP" do
 
     visit '/'
 
-    click_on "Sign In"
+    click_link "Login"
 
     expect(current_path).to eq(login_path)
 
