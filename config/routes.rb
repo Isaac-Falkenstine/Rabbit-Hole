@@ -14,5 +14,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create]
 
+  namespace :user do
+    get '/topics', to: "topics#new"
+    post '/topics', to: 'topics#create'
+  end
   resources :topics, only: [:show]
 end
