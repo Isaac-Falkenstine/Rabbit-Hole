@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 user = User.create(first_name: "Ian", last_name: "Carter", password: "password", email: "example@email.com")
+user_2 = User.create(first_name: "Amy", last_name: "Petrie", password: "password", email: "amy@example.com")
+GoogleOauthToken.create(token: ENV["token"], refresh_token: ENV["refresh_token"], user: user_2)
 
 topic_1 = Topic.create(title: "How to make a Youtube video",
                     goal: "To create a well edited Youtube video that I can be proud of",
