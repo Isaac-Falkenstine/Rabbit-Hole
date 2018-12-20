@@ -1,0 +1,42 @@
+body {
+  font-family: Ubuntu, sans-serif;
+  font-size:1em;
+  color:#404040;
+  margin:0;
+  padding:0;
+  background-color: #efefef;
+}
+
+/* Header Styles */
+header {
+  background-size: contain;
+  text-align:center;
+  color: #68849C;
+  height: 200px;
+}
+
+.overlay_container{
+  padding:15px 10%;
+  background-color: rgba(0,0,0,0.25)
+}
+
+header h1 a {
+  color: #a7b37d;
+}
+
+header a:hover {
+  color:#8ba22f;
+}
+
+/* Footer Styles */
+footer {
+  background-size: contain;
+  color: #68849C;
+  text-align:center;
+}
+
+footer .overlay_container {
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
