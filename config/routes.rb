@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/register', to: "users#new"
   get '/dashboard', to: "users#show"
 
+  get "/topic", to: "topics#index"
+
   resources :users, only: [:create]
 
   resources :topics, only: [:show]
