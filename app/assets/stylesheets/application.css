@@ -1,4 +1,4 @@
-*{
+/* *{
 	box-sizing: border-box;
 	margin:0;
 	padding:0;
@@ -56,11 +56,11 @@ input{
 button{
 	width:150px;
 	height:60px;
-	
+
 	font-size:20px;
 
 }
 .signup-button{
 	margin-left:3px;
 }
-
+ */
