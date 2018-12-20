@@ -1,26 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Melvin</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<section class="nav-bar">
-		<div class="buttons">
-			<button><%= link_to "Login", login_path%></button>
-			<button><%= link_to "Sign Up", register_path%></button>
-		</div>
-	</section>
-	<div class="spacer"></div>
-		<section class="main-section">
-			<input type="text" name="input">
-			<pre>
-			</pre>
-		</section>
-		<section class="footer">
 
-		</section>
+<h1> Welcome! </h1>
+<p> <%= link_to "Login", login_path%><br>
+<h3> or </h3>
+<%= link_to "Register", register_path%>
+</p>
 
-</body>
-</html>
