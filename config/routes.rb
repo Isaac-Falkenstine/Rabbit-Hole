@@ -7,12 +7,16 @@ Rails.application.routes.draw do
 
   get '/login', to: "sessions#new"
   post '/login', to: "sessions#create"
-  delete '/logout', to: "sessions#destroy"
+  # delete '/logout', to: "sessions#destroy"
 
   get '/register', to: "users#new"
   get '/dashboard', to: "users#show"
 
   resources :users, only: [:create]
 
+  namespace :user do
+    get '/topics', to: "topics#new"
+    post '/topics', to: 'topics#create'
+  end
   resources :topics, only: [:show]
 end

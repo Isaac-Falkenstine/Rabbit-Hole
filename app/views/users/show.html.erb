@@ -1,5 +1,8 @@
 <%= @facade.user.first_name %> <%= @facade.user.last_name %>
 
+<div class="New_topic">
+  <%= link_to "Create New Topic", user_topics_path, action: :new  %>
+</div>
 
 <h2> Research Completed </h2>
 <div class="complete_topics">
