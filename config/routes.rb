@@ -9,17 +9,16 @@ Rails.application.routes.draw do
   delete '/logout', to: "sessions#destroy"
 
   get '/register', to: "users#new"
+  post '/register', to: "users#create"
   get '/dashboard', to: "users#show"
-
-  get "/topic", to: "topics#show"
-
- 
 
   resources :users, only: [:create]
 
-  namespace :topic do 
-    post "/questions", to: "questions#create" 
+    namespace :user do
+      resources :topics, only: [:new, :create, :show]  do 
+        resources :questions, only: [:new, :create]
+    end
   end
 
-  resources :topics, only: [:show]
+
 end

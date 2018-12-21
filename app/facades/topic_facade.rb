@@ -2,7 +2,6 @@ class TopicFacade
   attr_reader :topic,
               :bing
   def initialize(topic)
-   
     @topic = topic
     @bing  = BingServiceAdapter.new(topic)
   end
