@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       flash[:notice] = "Registered as #{user.first_name} #{user.last_name}"
-      redirect_to dashboard_path
+      redirect_to user_dashboard_path
     else
       flash[:error] = "Please check your email and password information"
       redirect_to register_path

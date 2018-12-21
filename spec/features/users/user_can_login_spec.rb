@@ -19,7 +19,7 @@ describe "User can log in the APP" do
 
     click_on "Login"
 
-    expect(current_path).to eq(dashboard_path)
+    expect(current_path).to eq(user_dashboard_path)
     expect(page).to have_content("#{user.first_name} #{user.last_name}")
   end
 
@@ -46,7 +46,7 @@ describe "User can log in the APP" do
     visit '/login'
     click_on "Login with Google"
 
-    expect(current_path).to eq dashboard_path
+    expect(current_path).to eq(user_dashboard_path)
     expect(page).to have_content("You have successfully logged in!")
   end
 
@@ -55,7 +55,7 @@ describe "User can log in the APP" do
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit dashboard_path
+    visit user_dashboard_path
     click_on "Logout"
 
     expect(page).to have_content("Login")
@@ -67,7 +67,7 @@ describe "User can log in the APP" do
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit dashboard_path
+    visit user_dashboard_path
     click_on "Logout"
 
     expect(page).to have_content("Login")

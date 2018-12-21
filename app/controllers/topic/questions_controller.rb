@@ -7,7 +7,7 @@ class Topic::QuestionsController < ApplicationController
     topic = Topic.find(params[:id])
     @question = topic.questions.create(question_params) 
 
-    redirect_to topic_path(topic)
+    redirect_to user_topic_path(topic)
   end
 
   private

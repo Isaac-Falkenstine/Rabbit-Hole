@@ -6,11 +6,11 @@ describe "User can create a new topic" do
     user = create(:user)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit dashboard_path
+    visit user_dashboard_path
 
     click_on "Create New Topic"
 
-    expect(current_path).to eq(user_topics_path)
+    expect(current_path).to eq(new_user_topic_path)
 
     text_1 = "What do you want to learn about? What do you want to learn to do? Type your response below to create a new topic."
 
@@ -28,7 +28,7 @@ describe "User can create a new topic" do
 
     topic = Topic.last
 
-    expect(current_path).to eq(topic_path(topic))
+    expect(current_path).to eq(user_topic_path(topic))
 
     expect(page).to have_content(topic.title)
   end

@@ -10,7 +10,7 @@ describe 'User' do
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-      visit '/dashboard'
+     visit user_dashboard_path
       click_on topic_1.title
 
       expect(current_path).to eq(topic_path(topic_1))
@@ -23,7 +23,7 @@ describe 'User' do
       topic_1 = create(:topic, user_id: user.id)
       topic_2 = create(:topic, user_id: user.id, complete: true)
 
-      visit topic_path(topic_1)
+      visit user_topic_path(topic_1)
 
       fill_in "Question", with: "Do I need a lawyer?"
       click_on "New Question"
@@ -39,7 +39,7 @@ describe 'User' do
       topic_2 = create(:topic, user_id: user.id, complete: true)
       question = create(:question, title: "Do I need a lawyer?", topic: topic_1)
       
-      visit topic_path(topic_1)
+      visit user_topic_path(topic_1)
 
       within ".questions" do
         
