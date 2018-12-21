@@ -5,6 +5,7 @@ class TopicsController < ApplicationController
   end
 
   def show
-
+    topic = Topic.find(params[:format]||params[:id])
+    @facade = TopicFacade.new(topic) 
   end
 end
