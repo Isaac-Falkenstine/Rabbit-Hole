@@ -1,0 +1,27 @@
+<div class="topic">  
+  <%=@facade.topic.title%>
+  <%=@facade.topic.goal%>
+</div>
+
+<div class="Question">
+  <%= form_for @facade.topic, :url => {:controller => "topic/questions", :action => "create", id: "#{@facade.topic.id}" }, :method => "post"  do |f| %>
+    <%= f.label :title, "Question" %>
+    <%= f.text_field :title, size: 150 %>
+     <%= f.submit "New Question" %>
+  <% end %>
+</div>
+
+<div class="questions"> <p>My Questions:</p>
+  <%= @facade.questions.each do |question|%>
+    <%= question.title%>
+    <%= link_to "Search", @facade.search(question)%>
+    
+  <%end%>
+
+</div>
+
+
+
+
+
+

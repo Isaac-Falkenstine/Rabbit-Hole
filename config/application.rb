@@ -1,7 +1,8 @@
 require_relative 'boot'
 
-require "rails"
-# Pick the frameworks you want:
+require "rails/all"
+
+# Include each railties manually, excluding `active_storage/engine`
 require "active_model/railtie"
 require "active_job/railtie"
 require "active_record/railtie"
@@ -29,5 +30,6 @@ module RabbitHole
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    # config.assets.initialize_on_precompile = false
   end
 end

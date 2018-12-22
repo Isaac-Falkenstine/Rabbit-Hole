@@ -1,37 +1,38 @@
 require "rails_helper"
 
 describe 'As a visitor' do
-  xit 'I can register using Google Oauth' do
-    visit '/'
-    click_on "Register"
+  it 'I can register using Google Oauth' do
+    visit '/register'
 
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+          provider: "google_oauth2",
+          uid: "12345678910",
+          info: {
+            email: "google_example@example.com",
+            first_name: "John",
+            last_name: "Doe"
+          },
+          credentials: {
+            token: "123",
+            refresh_token: "456",
+            expires_at: DateTime.now,
+          }
+        })
+    click_on "Register with Google"
 
-    # stub_request(:get, "https://api.github.com/user/repos").
-    #     to_return(body: File.read("./spec/fixtures/user_repos_2.json"))
+    expect(page).to have_content("John Doe")
+    expect(current_path).to eq user_dashboard_path
+    expect(page).to have_content("Account Created!")
+  end
 
+  it 'I can register using Google Oauth' do
+    visit '/register'
+
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({"bad_credentials" => "bad_credentials"})
+    click_on "Register with Google"
+
+    expect(page).to have_content("Google Authorization was unable to be completed.")
   end
 end
-
-
-# stub_request(:get, "https://api.github.com/user/repos").
-#     to_return(body: File.read("./spec/fixtures/user_repos_2.json"))
-#
-#     stub_request(:get, "https://api.github.com/user/followers").
-#         to_return(body: File.read("./spec/fixtures/followers.json"))
-#
-#         stub_request(:get, "https://api.github.com/user/following").
-#             to_return(body: File.read("./spec/fixtures/user_following.json"))
-#
-# OmniAuth.config.test_mode = true
-# OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
-#   "credentials"=>{"token"=> ENV["github_access_token"], "expires"=>false}})
-#
-# user = create(:user, token: nil)
-# # OmniAuth.config.add_mock(:github)
-# allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-#
-# visit dashboard_path
-#
-# click_on "Connect to GitHub"
-#
-# expect(user.token).to eq(ENV["github_access_token"])

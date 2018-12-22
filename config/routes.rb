@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-
   get "auth/:provider/callback", to: "google_oauth#update"
   get "auth/failure", to: redirect("/")
 
@@ -10,9 +9,17 @@ Rails.application.routes.draw do
   delete '/logout', to: "sessions#destroy"
 
   get '/register', to: "users#new"
-  get '/dashboard', to: "users#show"
+  post '/register', to: "users#create"
+
 
   resources :users, only: [:create]
 
-  resources :topics, only: [:show]
+    namespace :user do
+        get '/dashboard', to: "topics#index", as: "/dashboard"
+      resources :topics, only: [:new, :create, :show]  do 
+        resources :questions, only: [:new, :create]
+    end
+  end
+
+
 end

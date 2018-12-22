@@ -14,6 +14,7 @@
     <div class="overlay_container">
     <h1>The Rabbit Hole</h1>
     <p>"You will never know less than you know right now." ~ Sandi Metz</p>
+<<<<<<< HEAD
 
     <% if current_user %>
       <div class="align-middle table-cell p3">
@@ -26,11 +27,22 @@
         <%= link_to 'Register', register_path %>
       </div>
     <% end %>
+=======
+    <% if current_user %>
+      <%= link_to "Logout", logout_path, method: :delete %>
+    <%end%>
+>>>>>>> e155d34f949335c48da329e0bea40d304fafedf7
     </div>
   </header>
 
 
   <body>
+
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+    </div>
 
     <%= yield %>
 

@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_19_001718) do
+ActiveRecord::Schema.define(version: 2018_12_19_154117) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "google_oauth_tokens", force: :cascade do |t|
+    t.string "token"
+    t.string "refresh_token"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_google_oauth_tokens_on_user_id"
+  end
 
   create_table "links", force: :cascade do |t|
     t.bigint "question_id"
@@ -32,15 +41,6 @@ ActiveRecord::Schema.define(version: 2018_12_19_001718) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["topic_id"], name: "index_questions_on_topic_id"
-  end
-
-  create_table "tokens", force: :cascade do |t|
-    t.bigint "user_id"
-    t.string "token"
-    t.string "token_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_tokens_on_user_id"
   end
 
   create_table "topics", force: :cascade do |t|
@@ -62,8 +62,8 @@ ActiveRecord::Schema.define(version: 2018_12_19_001718) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "google_oauth_tokens", "users"
   add_foreign_key "links", "questions"
   add_foreign_key "questions", "topics"
-  add_foreign_key "tokens", "users"
   add_foreign_key "topics", "users"
 end

@@ -1,0 +1,15 @@
+<div class="new_topic_form">
+
+  <%= form_for [@user, @topic], url: user_topics_path do |f|  %>
+
+    <p class="form_text">What do you want to learn about? What do you want to learn to do? Type your response below to create a new topic.</p>
+    <%= f.text_field :title, size: 200 %>
+
+    <p class="form_text">We support your journey to learn something new. What do you want to do, make, or create once the hard work pays off?</p>
+    <%= f.text_field :goal, size: 200 %>
+
+    <%= f.submit "Create New Topic" %>
+
+  <% end %>
+
+</div>
