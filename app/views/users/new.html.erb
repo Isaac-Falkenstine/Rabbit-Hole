@@ -3,7 +3,7 @@
   <%= link_to "Register with Google", "/auth/google_oauth2" %>
 
   <section>
-    
+
     <%= form_for @user do |form| %>
       <div >
         <%= form.label :email %>
@@ -25,7 +25,9 @@
         <%= form.label :password_confirmation %>
         <%= form.password_field :password_confirmation %>
       </div>
+      <div class="submit_register" >
       <%= form.submit 'Register' %>
+      </div>
     <% end %>
 
   </section>
