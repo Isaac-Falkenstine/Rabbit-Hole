@@ -10,6 +10,7 @@ $dropDown       : false;
   .navbar-header{
     .navbar-brand {
       font-size: 1.5em;
+      font-family: 'Staatliches', cursive;
       color: $colDefault;
       &:hover, &:focus {
         color: $colHighlight; }}
