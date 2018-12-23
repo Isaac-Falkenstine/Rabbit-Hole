@@ -14,10 +14,14 @@
 
     <%= javascript_pack_tag 'application' %>
     <%= stylesheet_link_tag 'application' %>
+
   </head>
 
+<header>
+  <%= render 'partials/nav' %>
+</header>
+
   <body>
-    <%= render 'partials/nav' %>
 
     <div class="container">
       <% flash.each do |key, value| %>

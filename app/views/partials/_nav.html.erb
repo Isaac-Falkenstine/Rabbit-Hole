@@ -5,7 +5,7 @@
       </div>
     <% if current_user %>
       <%=link_to "My Dashboard", dashboard_path %>
-      <%=link_to "Logout", logout_path %>
+      <%=button_to "Logout", logout_path, :method => 'delete' %>
     <%else%>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
