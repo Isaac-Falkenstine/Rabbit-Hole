@@ -1,12 +1,12 @@
 <nav class="navbar-default">
   <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/">The Rabbit Hole</a>
+        <a class="navbar-brand" href="/">Down the Rabbit Hole</a>
       </div>
     <% if current_user %>
       <ul class="nav navbar-nav navbar-right">
       <li><%=link_to "My Dashboard", dashboard_path %></li>
-      <li><a href="/logout", data-method="delete" rel="nofollow"> Logout</a></li>
+      <li><%=link_to "Logout", logout_path, method: :delete %></li>
       </ul>
     <%else%>
       <ul class="nav navbar-nav navbar-right">
