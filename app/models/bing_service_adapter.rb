@@ -2,11 +2,12 @@ class BingServiceAdapter
 
   def initialize(topic)
     @_search = nil
-    @topics = topic
+    @topic = topic
   end
 
   def results(question)
-    binding.pry
+    query = question.title.gsub(" ", "+") #plus topic name
+    get_json("/bing/v5.0/search?q=#{query}")
   end
 
   private

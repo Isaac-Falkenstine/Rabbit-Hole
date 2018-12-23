@@ -13,7 +13,7 @@ describe 'User' do
      visit user_dashboard_path
       click_on topic_1.title
 
-      expect(current_path).to eq(topic_path(topic_1))
+      expect(current_path).to eq(user_topic_path(topic_1))
       expect(page).to have_content(topic_1.title)
       expect(page).to have_content(topic_1.goal)
     end
@@ -28,26 +28,23 @@ describe 'User' do
       fill_in "Question", with: "Do I need a lawyer?"
       click_on "New Question"
 
-    within ".questions" do 
+    within ".questions" do
       expect(page).to have_content("My Questions:")
       expect(page).to have_content("Do I need a lawyer?")
     end
   end
   it "Searches bing using question titles" do
-      user = create(:user)
-      topic_1 = create(:topic, user_id: user.id)
-      topic_2 = create(:topic, user_id: user.id, complete: true)
-      question = create(:question, title: "Do I need a lawyer?", topic: topic_1)
-      
-      visit user_topic_path(topic_1)
+    user = create(:user)
+    topic_1 = create(:topic, user_id: user.id)
+    question = create(:question, title: "Do I need a lawyer?", topic: topic_1)
 
-      within ".questions" do
-        
-        click_on "Search"
-      end
+    visit user_topic_path(topic_1)
 
-    expect(page).to have_content("Your Results")
+    within ".questions" do
+      click_on "Search"
+    end
+
+    expect(page).to have_content("Your Results:")
     expect(page).to have_css(".results", count: 5)
   end
 end
-

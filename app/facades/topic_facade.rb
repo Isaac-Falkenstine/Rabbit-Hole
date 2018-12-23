@@ -13,7 +13,16 @@ class TopicFacade
   end
 
   def search(question)
-    @bing.results(question)
+    raw_results = @bing.results(question)
+    link_data = raw_results[:webPages][:value].map do |result|
+      [result[:url], result[:name]]
+    end.first(5)
+  end
+
+  def search_links(link_data, question)
+    link_data.map do |link|
+      question.links.create(url: link.first, name: link.last)
+    end
   end
 end
 

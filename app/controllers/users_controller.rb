@@ -17,10 +17,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @facade = UserDashboardFacade.new(current_user)
-  end
-
 private
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password)
