@@ -5,12 +5,12 @@ class User::TopicsController < ApplicationController
   end
 
   def index
-    @facade  = UserDashboardFacade.new(current_user)
+    @facade = UserDashboardFacade.new(current_user)
   end
 
   def show
     topic = Topic.find(params[:id])
-    @facade = TopicFacade.new(topic) 
+    @facade = TopicFacade.new(topic)
   end
 
   def create

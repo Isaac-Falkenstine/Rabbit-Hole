@@ -4,19 +4,18 @@
 </div>
 
 <div class="Question">
-  <%= form_for @facade.topic, :url => new_user_topic_question_path(@facade.topic.id) do |f| %>
+  <%= form_for @facade.new_question, :url => user_topic_questions_path(@facade.topic) do |f| %>
     <%= f.label :title, "Question" %>
     <%= f.text_field :title, size: 150 %>
-     <%= f.submit "New Question" %>
+    <%= f.submit "New Question" %>
   <% end %>
 </div>
 
 <div class="questions"> <p>My Questions:</p>
-  <%= @facade.questions.each do |question|%>
+  <%= @facade.topic.questions.each do |question|%>
     <%= question.title %>
     Notes: Text Box
     Bing search results: Link.new(url, name) w/save and discard buttons? If saved it moves into the "My links:" section
     My links: Link database objects
   <% end %>
-
 </div>

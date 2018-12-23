@@ -20,20 +20,20 @@ describe 'User' do
   end
   it "can create a question" do
     user = create(:user)
-      topic_1 = create(:topic, user_id: user.id)
-      topic_2 = create(:topic, user_id: user.id, complete: true)
+    topic_1 = create(:topic, user_id: user.id)
 
-      visit user_topic_path(topic_1)
+    visit user_topic_path(topic_1)
 
-      fill_in "Question", with: "Do I need a lawyer?"
-      click_on "New Question"
+    fill_in "Question", with: "Do I need a lawyer?"
+    click_on "New Question"
 
     within ".questions" do
       expect(page).to have_content("My Questions:")
       expect(page).to have_content("Do I need a lawyer?")
     end
   end
-  it "Searches bing using question titles" do
+
+  xit "Searches bing using question titles" do
     user = create(:user)
     topic_1 = create(:topic, user_id: user.id)
     question = create(:question, title: "Do I need a lawyer?", topic: topic_1)
