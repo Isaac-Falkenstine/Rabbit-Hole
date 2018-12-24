@@ -1,10 +1,13 @@
 <%= @facade.user.first_name %> <%= @facade.user.last_name %>
 
+<div class="New_topic">
+  <%= link_to "Create New Topic", new_user_topic_path  %>
+</div>
 
 <h2> Research Completed </h2>
 <div class="complete_topics">
   <% @facade.complete_topics.each do |topic| %>
-    <%= link_to topic.title, topic_path(topic) %>
+    <%= link_to topic.title, user_topic_path(topic) %>
     Research updated on <%= topic.updated_at %>
   <% end %>
 </div>
@@ -12,7 +15,7 @@
 <h2> Research In Progress </h2>
 <div class="in_progress_topics">
   <% @facade.in_progress_topics.each do |topic| %>
-    <%= link_to topic.title, topic_path(topic) %>
+    <%= link_to topic.title, user_topic_path(topic) %>
     Research began on <%= topic.created_at %>
   <% end %>
 </div>

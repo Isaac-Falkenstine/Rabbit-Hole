@@ -14,11 +14,21 @@
     <div class="overlay_container">
     <h1>The Rabbit Hole</h1>
     <p>"You will never know less than you know right now." ~ Sandi Metz</p>
+
     <% if current_user %>
-      <%= link_to "Logout", logout_path, method: :delete %>
-    <%end%>
+      <div class="align-middle table-cell p3">
+        <%= link_to "Profile", user_dashboard_path %>
+        <%= link_to 'Log out', logout_path, method: 'delete' %>
+      </div>
+    <% else %>
+      <div class="align-middle table-cell p3">
+        <%= link_to 'Sign in', login_path, class: "px2"%>
+        <%= link_to 'Register', register_path %>
+      </div>
+    <% end %>
     </div>
   </header>
+
 
   <body>
 

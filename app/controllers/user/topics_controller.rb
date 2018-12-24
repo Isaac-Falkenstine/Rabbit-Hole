@@ -4,12 +4,20 @@ class User::TopicsController < ApplicationController
     @user = current_user
   end
 
+  def index
+    @facade = UserDashboardFacade.new(current_user)
+  end
+
+  def show
+    topic = Topic.find(params[:id])
+    @facade = TopicFacade.new(topic)
+  end
+
   def create
-    user = User.find(params[:format])
-    topic = user.topics.create!(topic_params)
+    topic = current_user.topics.create(topic_params)
     if topic.save
       flash[:notice] = "Topic created"
-      redirect_to topic_path(topic)
+      redirect_to user_topic_path(topic)
     else
       flash[:error] = "Topic couldn't be save, fill all the forms"
     end
