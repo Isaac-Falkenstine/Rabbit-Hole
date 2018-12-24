@@ -5,17 +5,15 @@ class TopicFacade
     @topic = topic
   end
 
-  # def questions
-  #   @topic.questions.map do |question|
-  #     QuestionResult.new(question)
-  #   end
-  # end
-
   def search(question)
     raw_results = service.results(question)
     link_data = raw_results[:webPages][:value].map do |result|
-      [result[:url], result[:name]]
+      question.links.new(url: result[:url], name: result[:name])
     end.first(5)
+  end
+
+  def topic_questions
+    topic.questions
   end
 
   def search_links(link_data, question)
@@ -28,10 +26,14 @@ class TopicFacade
     topic.questions.new
   end
 
+  def searched_question
+    topic.questions.last
+  end
+
   private
 
   def service
-   BingServiceAdapter.new(topic)
+   BingService.new(topic)
   end
 end
 

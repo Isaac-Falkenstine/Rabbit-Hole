@@ -27,24 +27,20 @@ describe 'User' do
     fill_in "Question", with: "Do I need a lawyer?"
     click_on "New Question"
 
-    within ".questions" do
-      expect(page).to have_content("My Questions:")
-      expect(page).to have_content("Do I need a lawyer?")
-    end
+    expect(page).to have_content("My Questions:")
+    expect(page).to have_content("Do I need a lawyer?")
   end
 
-  xit "Searches bing using question titles" do
+  it "Searches bing using question titles" do
     user = create(:user)
-    topic_1 = create(:topic, user_id: user.id)
-    question = create(:question, title: "Do I need a lawyer?", topic: topic_1)
+    topic_1 = create(:topic, user_id: user.id, title: "Disabilty in Colorado")
 
     visit user_topic_path(topic_1)
 
-    within ".questions" do
-      click_on "Search"
-    end
+    fill_in "Question", with: "Do I need a lawyer?"
+    click_on "New Question"
 
-    expect(page).to have_content("Your Results:")
-    expect(page).to have_css(".results", count: 5)
+    expect(page).to have_content("Bing results:")
+    expect(page).to have_css(".search_results", count: 5)
   end
 end

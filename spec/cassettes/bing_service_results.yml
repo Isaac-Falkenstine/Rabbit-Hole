@@ -1,0 +1,1213 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.cognitive.microsoft.com/bing/v5.0/search?q=Photography+What+is+a+film+camera%3F
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Ocp-Apim-Subscription-Key:
+      - "<Ocp-Apim-Subscription-Key>"
+      User-Agent:
+      - Faraday v0.15.4
+  response:
+    status:
+      code: 200
+      message: ''
+    headers: {}
+    body:
+      encoding: UTF-8
+      string: |
+        {
+            "_type": "SearchResponse",
+            "queryContext": {
+                "originalQuery": "disabilty in colorado do i need a lawyer",
+                "alteredQuery": "disability in colorado do i need a lawyer",
+                "alterationOverrideQuery": "+disabilty in colorado do i need a lawyer",
+                "adultIntent": false
+            },
+            "webPages": {
+                "webSearchUrl": "https://www.bing.com/search?q=disabilty+in+colorado+do+i+need+a+lawyer",
+                "totalEstimatedMatches": 70400000,
+                "value": [
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.0",
+                        "name": "Colorado Social Security Disability Lawyers",
+                        "url": "https://www.disability-benefits-help.org/social-security-attorney/colorado",
+                        "displayUrl": "https://www.disability-benefits-help.org/social-security-attorney/...",
+                        "snippet": "When it comes to being awarded social security disability benefits in the state of Colorado, there are a few things applicants should consider before beginning the application process. On a national scale, SSD benefits are not easy to get. Only 32.1% of initial disability claims are awarded; that percentage is the same for the state of Colorado.",
+                        "dateLastCrawled": "2018-12-18T00:48:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.1",
+                        "name": "Denver & Colorado Social Security Disability Lawyer",
+                        "url": "https://www.sawayalaw.com/social-security-disability-attorney/",
+                        "displayUrl": "https://www.sawayalaw.com/social-security-disability-attorney",
+                        "snippet": "Our Colorado Social Security Disability attorneys will protect your rights and work hard to help you get the benefits you need. Contact our firm today for sound legal counsel and top-notch representation in your Social Security Disability claim.",
+                        "deepLinks": [
+                            {
+                                "name": "Legal Services",
+                                "url": "https://sawayalaw.com/legal-services"
+                            },
+                            {
+                                "name": "Colorado VA Disability Lawyer",
+                                "url": "https://www.sawayalaw.com/va-disabilities-lawyer/"
+                            }
+                        ],
+                        "dateLastCrawled": "2018-12-15T16:16:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.2",
+                        "name": "What Is A Criminal Defense Attorney - lawyeroid.us.com",
+                        "url": "http://lawyeroid.us.com/?WhatIsACriminalDefenseAttorney",
+                        "displayUrl": "lawyeroid.us.com/?WhatIsACriminalDefenseAttorney",
+                        "snippet": "Social Security Disability Attorney Colorado Springs Do I Need A Lawyer For A Traffic Ticket; Save My Home; What Is A Criminal Defense Attorney ...",
+                        "dateLastCrawled": "2018-12-16T07:45:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.3",
+                        "name": "Filing for Disability in Colorado: Social Security and SSI ...",
+                        "url": "https://www.disabilitysecrets.com/disability-resources-colorado.html",
+                        "displayUrl": "https://www.disabilitysecrets.com/disability-resources-colorado.html",
+                        "snippet": "Legal Services in Colorado. If you've been denied disability benefits in Colorado, you should consider hiring a disability lawyer to help you appeal. Consider hiring an experienced Social Security disability lawyer to assist you with your disability claim. You can find a local lawyer by going to our Colorado disability lawyers page.",
+                        "dateLastCrawled": "2018-12-16T07:29:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.4",
+                        "name": "Custody Case - lawyerery.us.com",
+                        "url": "http://lawyerery.us.com/?CustodyCase",
+                        "displayUrl": "lawyerery.us.com/?CustodyCase",
+                        "snippet": "Social Security Disability Attorney Colorado Springs; Do I Need A Lawyer For Bankruptcy; Wisconsin Employment Law; Custody Case",
+                        "dateLastCrawled": "2018-12-13T20:39:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.5",
+                        "name": "Loss Mitigation - lawyeropedia.us.com",
+                        "url": "http://lawyeropedia.us.com/?Loss-Mitigation",
+                        "displayUrl": "lawyeropedia.us.com/?Loss-Mitigation",
+                        "snippet": "Social Security Disability Attorney Colorado Springs Do I Need A Lawyer For A Traffic Ticket Stop Foreclosure Fast; Chicago Injury Lawyer; Loss Mitigation Is A Dui A Felony; Maryland Mesothelioma Lawyers; Social Security Disability Attorney Colorado Springs; Do I Need A Lawyer For A Traffic Ticket; Stop Foreclosure Fast; Chicago Injury Lawyer ...",
+                        "dateLastCrawled": "2018-12-13T21:34:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.6",
+                        "name": "Do you Need a Social Security Attorney? | Colorado Springs, CO",
+                        "url": "https://www.disability-benefits-help.org/social-security-attorney/colorado-springs-disability-lawyer",
+                        "displayUrl": "https://www.disability-benefits-help.org/social-security-attorney/...",
+                        "snippet": "Colorado Springs Social Security Attorney or Advocate With the guidance of an attorney or advocate in your area, you can receive the disability benefits you need to help you financially. The disability applications of Colorado Springs residents are processed in the Colorado Springs hearing office.",
+                        "dateLastCrawled": "2018-12-16T13:48:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.7",
+                        "name": "Family Law New York - lawyerery.us.com",
+                        "url": "http://lawyerery.us.com/?Family.Law.New.York",
+                        "displayUrl": "lawyerery.us.com/?Family.Law.New.York",
+                        "snippet": "Family Law New York : Call Today 24/7 Service. Over 1M Lawyers Listed. 24/7 Availability. Social Security Disability Attorney Denver Colorado; Do I Need A Lawyer For Foreclosure; Social Security Benefits Application; Chicago Personal Injury Law Firm;",
+                        "dateLastCrawled": "2018-12-14T02:32:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.8",
+                        "name": "Long Term Disability Insurance Lawyers | Frankel ...",
+                        "url": "https://www.frankelnewfield.com/",
+                        "about": [
+                            {
+                                "name": "DisabilityLawyer"
+                            }
+                        ],
+                        "displayUrl": "https://www.frankelnewfield.com",
+                        "snippet": "I saw that you waived some of the expenses. I know you didn't have to do that and wanted to send you a note to say thank you! Keep doing what you do, there are so many people out there that need an attorney like you.",
+                        "dateLastCrawled": "2018-12-17T12:24:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.9",
+                        "name": "Disability Determination Services - colorado.gov",
+                        "url": "https://www.colorado.gov/dds",
+                        "displayUrl": "https://www.colorado.gov/dds",
+                        "snippet": "Disability Determination Services (DDS) is the State Agency that makes the disability decisions for Social Security. When Social Security added protection for the disabled in 1954, the Congress wrote into the law that the disability decision had to be made by a State Agency and not by a federal office.",
+                        "dateLastCrawled": "2018-12-16T06:55:00"
+                    }
+                ]
+            },
+            "relatedSearches": {
+                "id": "https://api.cognitive.microsoft.com/api/v7/#RelatedSearches",
+                "value": [
+                    {
+                        "text": "best disability lawyers in colorado",
+                        "displayText": "best disability lawyers in colorado",
+                        "webSearchUrl": "https://www.bing.com/search?q=best+disability+lawyers+in+colorado"
+                    },
+                    {
+                        "text": "disability lawyers in colorado springs",
+                        "displayText": "disability lawyers in colorado springs",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+lawyers+in+colorado+springs"
+                    },
+                    {
+                        "text": "disability lawyers in my area",
+                        "displayText": "disability lawyers in my area",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+lawyers+in+my+area"
+                    },
+                    {
+                        "text": "disability attorneys in colorado",
+                        "displayText": "disability attorneys in colorado",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+attorneys+in+colorado"
+                    }
+                ]
+            },
+            "rankingResponse": {
+                "mainline": {
+                    "items": [
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 0,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.0"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 1,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.1"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 2,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.2"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 3,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.3"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 4,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.4"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 5,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.5"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 6,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.6"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 7,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.7"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 8,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.8"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 9,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.9"
+                            }
+                        }
+                    ]
+                },
+                "sidebar": {
+                    "items": [
+                        {
+                            "answerType": "RelatedSearches",
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#RelatedSearches"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    http_version: 
+  recorded_at: Mon, 24 Dec 2018 00:36:30 GMT
+- request:
+    method: get
+    uri: https://api.cognitive.microsoft.com/bing/v5.0/search?q=Photography+What+is+a+film+camera%3F
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Ocp-Apim-Subscription-Key:
+      - "<Ocp-Apim-Subscription-Key>"
+      User-Agent:
+      - Faraday v0.15.4
+  response:
+    status:
+      code: 200
+      message: ''
+    headers: {}
+    body:
+      encoding: UTF-8
+      string: |
+        {
+            "_type": "SearchResponse",
+            "queryContext": {
+                "originalQuery": "disabilty in colorado do i need a lawyer",
+                "alteredQuery": "disability in colorado do i need a lawyer",
+                "alterationOverrideQuery": "+disabilty in colorado do i need a lawyer",
+                "adultIntent": false
+            },
+            "webPages": {
+                "webSearchUrl": "https://www.bing.com/search?q=disabilty+in+colorado+do+i+need+a+lawyer",
+                "totalEstimatedMatches": 70400000,
+                "value": [
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.0",
+                        "name": "Colorado Social Security Disability Lawyers",
+                        "url": "https://www.disability-benefits-help.org/social-security-attorney/colorado",
+                        "displayUrl": "https://www.disability-benefits-help.org/social-security-attorney/...",
+                        "snippet": "When it comes to being awarded social security disability benefits in the state of Colorado, there are a few things applicants should consider before beginning the application process. On a national scale, SSD benefits are not easy to get. Only 32.1% of initial disability claims are awarded; that percentage is the same for the state of Colorado.",
+                        "dateLastCrawled": "2018-12-18T00:48:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.1",
+                        "name": "Denver & Colorado Social Security Disability Lawyer",
+                        "url": "https://www.sawayalaw.com/social-security-disability-attorney/",
+                        "displayUrl": "https://www.sawayalaw.com/social-security-disability-attorney",
+                        "snippet": "Our Colorado Social Security Disability attorneys will protect your rights and work hard to help you get the benefits you need. Contact our firm today for sound legal counsel and top-notch representation in your Social Security Disability claim.",
+                        "deepLinks": [
+                            {
+                                "name": "Legal Services",
+                                "url": "https://sawayalaw.com/legal-services"
+                            },
+                            {
+                                "name": "Colorado VA Disability Lawyer",
+                                "url": "https://www.sawayalaw.com/va-disabilities-lawyer/"
+                            }
+                        ],
+                        "dateLastCrawled": "2018-12-15T16:16:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.2",
+                        "name": "What Is A Criminal Defense Attorney - lawyeroid.us.com",
+                        "url": "http://lawyeroid.us.com/?WhatIsACriminalDefenseAttorney",
+                        "displayUrl": "lawyeroid.us.com/?WhatIsACriminalDefenseAttorney",
+                        "snippet": "Social Security Disability Attorney Colorado Springs Do I Need A Lawyer For A Traffic Ticket; Save My Home; What Is A Criminal Defense Attorney ...",
+                        "dateLastCrawled": "2018-12-16T07:45:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.3",
+                        "name": "Filing for Disability in Colorado: Social Security and SSI ...",
+                        "url": "https://www.disabilitysecrets.com/disability-resources-colorado.html",
+                        "displayUrl": "https://www.disabilitysecrets.com/disability-resources-colorado.html",
+                        "snippet": "Legal Services in Colorado. If you've been denied disability benefits in Colorado, you should consider hiring a disability lawyer to help you appeal. Consider hiring an experienced Social Security disability lawyer to assist you with your disability claim. You can find a local lawyer by going to our Colorado disability lawyers page.",
+                        "dateLastCrawled": "2018-12-16T07:29:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.4",
+                        "name": "Custody Case - lawyerery.us.com",
+                        "url": "http://lawyerery.us.com/?CustodyCase",
+                        "displayUrl": "lawyerery.us.com/?CustodyCase",
+                        "snippet": "Social Security Disability Attorney Colorado Springs; Do I Need A Lawyer For Bankruptcy; Wisconsin Employment Law; Custody Case",
+                        "dateLastCrawled": "2018-12-13T20:39:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.5",
+                        "name": "Loss Mitigation - lawyeropedia.us.com",
+                        "url": "http://lawyeropedia.us.com/?Loss-Mitigation",
+                        "displayUrl": "lawyeropedia.us.com/?Loss-Mitigation",
+                        "snippet": "Social Security Disability Attorney Colorado Springs Do I Need A Lawyer For A Traffic Ticket Stop Foreclosure Fast; Chicago Injury Lawyer; Loss Mitigation Is A Dui A Felony; Maryland Mesothelioma Lawyers; Social Security Disability Attorney Colorado Springs; Do I Need A Lawyer For A Traffic Ticket; Stop Foreclosure Fast; Chicago Injury Lawyer ...",
+                        "dateLastCrawled": "2018-12-13T21:34:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.6",
+                        "name": "Do you Need a Social Security Attorney? | Colorado Springs, CO",
+                        "url": "https://www.disability-benefits-help.org/social-security-attorney/colorado-springs-disability-lawyer",
+                        "displayUrl": "https://www.disability-benefits-help.org/social-security-attorney/...",
+                        "snippet": "Colorado Springs Social Security Attorney or Advocate With the guidance of an attorney or advocate in your area, you can receive the disability benefits you need to help you financially. The disability applications of Colorado Springs residents are processed in the Colorado Springs hearing office.",
+                        "dateLastCrawled": "2018-12-16T13:48:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.7",
+                        "name": "Family Law New York - lawyerery.us.com",
+                        "url": "http://lawyerery.us.com/?Family.Law.New.York",
+                        "displayUrl": "lawyerery.us.com/?Family.Law.New.York",
+                        "snippet": "Family Law New York : Call Today 24/7 Service. Over 1M Lawyers Listed. 24/7 Availability. Social Security Disability Attorney Denver Colorado; Do I Need A Lawyer For Foreclosure; Social Security Benefits Application; Chicago Personal Injury Law Firm;",
+                        "dateLastCrawled": "2018-12-14T02:32:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.8",
+                        "name": "Long Term Disability Insurance Lawyers | Frankel ...",
+                        "url": "https://www.frankelnewfield.com/",
+                        "about": [
+                            {
+                                "name": "DisabilityLawyer"
+                            }
+                        ],
+                        "displayUrl": "https://www.frankelnewfield.com",
+                        "snippet": "I saw that you waived some of the expenses. I know you didn't have to do that and wanted to send you a note to say thank you! Keep doing what you do, there are so many people out there that need an attorney like you.",
+                        "dateLastCrawled": "2018-12-17T12:24:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.9",
+                        "name": "Disability Determination Services - colorado.gov",
+                        "url": "https://www.colorado.gov/dds",
+                        "displayUrl": "https://www.colorado.gov/dds",
+                        "snippet": "Disability Determination Services (DDS) is the State Agency that makes the disability decisions for Social Security. When Social Security added protection for the disabled in 1954, the Congress wrote into the law that the disability decision had to be made by a State Agency and not by a federal office.",
+                        "dateLastCrawled": "2018-12-16T06:55:00"
+                    }
+                ]
+            },
+            "relatedSearches": {
+                "id": "https://api.cognitive.microsoft.com/api/v7/#RelatedSearches",
+                "value": [
+                    {
+                        "text": "best disability lawyers in colorado",
+                        "displayText": "best disability lawyers in colorado",
+                        "webSearchUrl": "https://www.bing.com/search?q=best+disability+lawyers+in+colorado"
+                    },
+                    {
+                        "text": "disability lawyers in colorado springs",
+                        "displayText": "disability lawyers in colorado springs",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+lawyers+in+colorado+springs"
+                    },
+                    {
+                        "text": "disability lawyers in my area",
+                        "displayText": "disability lawyers in my area",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+lawyers+in+my+area"
+                    },
+                    {
+                        "text": "disability attorneys in colorado",
+                        "displayText": "disability attorneys in colorado",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+attorneys+in+colorado"
+                    }
+                ]
+            },
+            "rankingResponse": {
+                "mainline": {
+                    "items": [
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 0,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.0"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 1,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.1"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 2,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.2"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 3,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.3"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 4,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.4"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 5,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.5"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 6,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.6"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 7,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.7"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 8,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.8"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 9,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.9"
+                            }
+                        }
+                    ]
+                },
+                "sidebar": {
+                    "items": [
+                        {
+                            "answerType": "RelatedSearches",
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#RelatedSearches"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    http_version: 
+  recorded_at: Mon, 24 Dec 2018 00:36:30 GMT
+- request:
+    method: get
+    uri: https://api.cognitive.microsoft.com/bing/v5.0/search?q=Photography+What+is+a+film+camera%3F
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Ocp-Apim-Subscription-Key:
+      - "<Ocp-Apim-Subscription-Key>"
+      User-Agent:
+      - Faraday v0.15.4
+  response:
+    status:
+      code: 200
+      message: ''
+    headers: {}
+    body:
+      encoding: UTF-8
+      string: |
+        {
+            "_type": "SearchResponse",
+            "queryContext": {
+                "originalQuery": "disabilty in colorado do i need a lawyer",
+                "alteredQuery": "disability in colorado do i need a lawyer",
+                "alterationOverrideQuery": "+disabilty in colorado do i need a lawyer",
+                "adultIntent": false
+            },
+            "webPages": {
+                "webSearchUrl": "https://www.bing.com/search?q=disabilty+in+colorado+do+i+need+a+lawyer",
+                "totalEstimatedMatches": 70400000,
+                "value": [
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.0",
+                        "name": "Colorado Social Security Disability Lawyers",
+                        "url": "https://www.disability-benefits-help.org/social-security-attorney/colorado",
+                        "displayUrl": "https://www.disability-benefits-help.org/social-security-attorney/...",
+                        "snippet": "When it comes to being awarded social security disability benefits in the state of Colorado, there are a few things applicants should consider before beginning the application process. On a national scale, SSD benefits are not easy to get. Only 32.1% of initial disability claims are awarded; that percentage is the same for the state of Colorado.",
+                        "dateLastCrawled": "2018-12-18T00:48:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.1",
+                        "name": "Denver & Colorado Social Security Disability Lawyer",
+                        "url": "https://www.sawayalaw.com/social-security-disability-attorney/",
+                        "displayUrl": "https://www.sawayalaw.com/social-security-disability-attorney",
+                        "snippet": "Our Colorado Social Security Disability attorneys will protect your rights and work hard to help you get the benefits you need. Contact our firm today for sound legal counsel and top-notch representation in your Social Security Disability claim.",
+                        "deepLinks": [
+                            {
+                                "name": "Legal Services",
+                                "url": "https://sawayalaw.com/legal-services"
+                            },
+                            {
+                                "name": "Colorado VA Disability Lawyer",
+                                "url": "https://www.sawayalaw.com/va-disabilities-lawyer/"
+                            }
+                        ],
+                        "dateLastCrawled": "2018-12-15T16:16:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.2",
+                        "name": "What Is A Criminal Defense Attorney - lawyeroid.us.com",
+                        "url": "http://lawyeroid.us.com/?WhatIsACriminalDefenseAttorney",
+                        "displayUrl": "lawyeroid.us.com/?WhatIsACriminalDefenseAttorney",
+                        "snippet": "Social Security Disability Attorney Colorado Springs Do I Need A Lawyer For A Traffic Ticket; Save My Home; What Is A Criminal Defense Attorney ...",
+                        "dateLastCrawled": "2018-12-16T07:45:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.3",
+                        "name": "Filing for Disability in Colorado: Social Security and SSI ...",
+                        "url": "https://www.disabilitysecrets.com/disability-resources-colorado.html",
+                        "displayUrl": "https://www.disabilitysecrets.com/disability-resources-colorado.html",
+                        "snippet": "Legal Services in Colorado. If you've been denied disability benefits in Colorado, you should consider hiring a disability lawyer to help you appeal. Consider hiring an experienced Social Security disability lawyer to assist you with your disability claim. You can find a local lawyer by going to our Colorado disability lawyers page.",
+                        "dateLastCrawled": "2018-12-16T07:29:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.4",
+                        "name": "Custody Case - lawyerery.us.com",
+                        "url": "http://lawyerery.us.com/?CustodyCase",
+                        "displayUrl": "lawyerery.us.com/?CustodyCase",
+                        "snippet": "Social Security Disability Attorney Colorado Springs; Do I Need A Lawyer For Bankruptcy; Wisconsin Employment Law; Custody Case",
+                        "dateLastCrawled": "2018-12-13T20:39:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.5",
+                        "name": "Loss Mitigation - lawyeropedia.us.com",
+                        "url": "http://lawyeropedia.us.com/?Loss-Mitigation",
+                        "displayUrl": "lawyeropedia.us.com/?Loss-Mitigation",
+                        "snippet": "Social Security Disability Attorney Colorado Springs Do I Need A Lawyer For A Traffic Ticket Stop Foreclosure Fast; Chicago Injury Lawyer; Loss Mitigation Is A Dui A Felony; Maryland Mesothelioma Lawyers; Social Security Disability Attorney Colorado Springs; Do I Need A Lawyer For A Traffic Ticket; Stop Foreclosure Fast; Chicago Injury Lawyer ...",
+                        "dateLastCrawled": "2018-12-13T21:34:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.6",
+                        "name": "Do you Need a Social Security Attorney? | Colorado Springs, CO",
+                        "url": "https://www.disability-benefits-help.org/social-security-attorney/colorado-springs-disability-lawyer",
+                        "displayUrl": "https://www.disability-benefits-help.org/social-security-attorney/...",
+                        "snippet": "Colorado Springs Social Security Attorney or Advocate With the guidance of an attorney or advocate in your area, you can receive the disability benefits you need to help you financially. The disability applications of Colorado Springs residents are processed in the Colorado Springs hearing office.",
+                        "dateLastCrawled": "2018-12-16T13:48:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.7",
+                        "name": "Family Law New York - lawyerery.us.com",
+                        "url": "http://lawyerery.us.com/?Family.Law.New.York",
+                        "displayUrl": "lawyerery.us.com/?Family.Law.New.York",
+                        "snippet": "Family Law New York : Call Today 24/7 Service. Over 1M Lawyers Listed. 24/7 Availability. Social Security Disability Attorney Denver Colorado; Do I Need A Lawyer For Foreclosure; Social Security Benefits Application; Chicago Personal Injury Law Firm;",
+                        "dateLastCrawled": "2018-12-14T02:32:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.8",
+                        "name": "Long Term Disability Insurance Lawyers | Frankel ...",
+                        "url": "https://www.frankelnewfield.com/",
+                        "about": [
+                            {
+                                "name": "DisabilityLawyer"
+                            }
+                        ],
+                        "displayUrl": "https://www.frankelnewfield.com",
+                        "snippet": "I saw that you waived some of the expenses. I know you didn't have to do that and wanted to send you a note to say thank you! Keep doing what you do, there are so many people out there that need an attorney like you.",
+                        "dateLastCrawled": "2018-12-17T12:24:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.9",
+                        "name": "Disability Determination Services - colorado.gov",
+                        "url": "https://www.colorado.gov/dds",
+                        "displayUrl": "https://www.colorado.gov/dds",
+                        "snippet": "Disability Determination Services (DDS) is the State Agency that makes the disability decisions for Social Security. When Social Security added protection for the disabled in 1954, the Congress wrote into the law that the disability decision had to be made by a State Agency and not by a federal office.",
+                        "dateLastCrawled": "2018-12-16T06:55:00"
+                    }
+                ]
+            },
+            "relatedSearches": {
+                "id": "https://api.cognitive.microsoft.com/api/v7/#RelatedSearches",
+                "value": [
+                    {
+                        "text": "best disability lawyers in colorado",
+                        "displayText": "best disability lawyers in colorado",
+                        "webSearchUrl": "https://www.bing.com/search?q=best+disability+lawyers+in+colorado"
+                    },
+                    {
+                        "text": "disability lawyers in colorado springs",
+                        "displayText": "disability lawyers in colorado springs",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+lawyers+in+colorado+springs"
+                    },
+                    {
+                        "text": "disability lawyers in my area",
+                        "displayText": "disability lawyers in my area",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+lawyers+in+my+area"
+                    },
+                    {
+                        "text": "disability attorneys in colorado",
+                        "displayText": "disability attorneys in colorado",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+attorneys+in+colorado"
+                    }
+                ]
+            },
+            "rankingResponse": {
+                "mainline": {
+                    "items": [
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 0,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.0"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 1,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.1"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 2,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.2"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 3,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.3"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 4,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.4"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 5,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.5"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 6,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.6"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 7,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.7"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 8,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.8"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 9,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.9"
+                            }
+                        }
+                    ]
+                },
+                "sidebar": {
+                    "items": [
+                        {
+                            "answerType": "RelatedSearches",
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#RelatedSearches"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    http_version: 
+  recorded_at: Mon, 24 Dec 2018 00:36:30 GMT
+- request:
+    method: get
+    uri: https://api.cognitive.microsoft.com/bing/v5.0/search?q=Photography+What+is+a+film+camera%3F
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Ocp-Apim-Subscription-Key:
+      - "<Ocp-Apim-Subscription-Key>"
+      User-Agent:
+      - Faraday v0.15.4
+  response:
+    status:
+      code: 200
+      message: ''
+    headers: {}
+    body:
+      encoding: UTF-8
+      string: |
+        {
+            "_type": "SearchResponse",
+            "queryContext": {
+                "originalQuery": "disabilty in colorado do i need a lawyer",
+                "alteredQuery": "disability in colorado do i need a lawyer",
+                "alterationOverrideQuery": "+disabilty in colorado do i need a lawyer",
+                "adultIntent": false
+            },
+            "webPages": {
+                "webSearchUrl": "https://www.bing.com/search?q=disabilty+in+colorado+do+i+need+a+lawyer",
+                "totalEstimatedMatches": 70400000,
+                "value": [
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.0",
+                        "name": "Colorado Social Security Disability Lawyers",
+                        "url": "https://www.disability-benefits-help.org/social-security-attorney/colorado",
+                        "displayUrl": "https://www.disability-benefits-help.org/social-security-attorney/...",
+                        "snippet": "When it comes to being awarded social security disability benefits in the state of Colorado, there are a few things applicants should consider before beginning the application process. On a national scale, SSD benefits are not easy to get. Only 32.1% of initial disability claims are awarded; that percentage is the same for the state of Colorado.",
+                        "dateLastCrawled": "2018-12-18T00:48:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.1",
+                        "name": "Denver & Colorado Social Security Disability Lawyer",
+                        "url": "https://www.sawayalaw.com/social-security-disability-attorney/",
+                        "displayUrl": "https://www.sawayalaw.com/social-security-disability-attorney",
+                        "snippet": "Our Colorado Social Security Disability attorneys will protect your rights and work hard to help you get the benefits you need. Contact our firm today for sound legal counsel and top-notch representation in your Social Security Disability claim.",
+                        "deepLinks": [
+                            {
+                                "name": "Legal Services",
+                                "url": "https://sawayalaw.com/legal-services"
+                            },
+                            {
+                                "name": "Colorado VA Disability Lawyer",
+                                "url": "https://www.sawayalaw.com/va-disabilities-lawyer/"
+                            }
+                        ],
+                        "dateLastCrawled": "2018-12-15T16:16:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.2",
+                        "name": "What Is A Criminal Defense Attorney - lawyeroid.us.com",
+                        "url": "http://lawyeroid.us.com/?WhatIsACriminalDefenseAttorney",
+                        "displayUrl": "lawyeroid.us.com/?WhatIsACriminalDefenseAttorney",
+                        "snippet": "Social Security Disability Attorney Colorado Springs Do I Need A Lawyer For A Traffic Ticket; Save My Home; What Is A Criminal Defense Attorney ...",
+                        "dateLastCrawled": "2018-12-16T07:45:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.3",
+                        "name": "Filing for Disability in Colorado: Social Security and SSI ...",
+                        "url": "https://www.disabilitysecrets.com/disability-resources-colorado.html",
+                        "displayUrl": "https://www.disabilitysecrets.com/disability-resources-colorado.html",
+                        "snippet": "Legal Services in Colorado. If you've been denied disability benefits in Colorado, you should consider hiring a disability lawyer to help you appeal. Consider hiring an experienced Social Security disability lawyer to assist you with your disability claim. You can find a local lawyer by going to our Colorado disability lawyers page.",
+                        "dateLastCrawled": "2018-12-16T07:29:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.4",
+                        "name": "Custody Case - lawyerery.us.com",
+                        "url": "http://lawyerery.us.com/?CustodyCase",
+                        "displayUrl": "lawyerery.us.com/?CustodyCase",
+                        "snippet": "Social Security Disability Attorney Colorado Springs; Do I Need A Lawyer For Bankruptcy; Wisconsin Employment Law; Custody Case",
+                        "dateLastCrawled": "2018-12-13T20:39:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.5",
+                        "name": "Loss Mitigation - lawyeropedia.us.com",
+                        "url": "http://lawyeropedia.us.com/?Loss-Mitigation",
+                        "displayUrl": "lawyeropedia.us.com/?Loss-Mitigation",
+                        "snippet": "Social Security Disability Attorney Colorado Springs Do I Need A Lawyer For A Traffic Ticket Stop Foreclosure Fast; Chicago Injury Lawyer; Loss Mitigation Is A Dui A Felony; Maryland Mesothelioma Lawyers; Social Security Disability Attorney Colorado Springs; Do I Need A Lawyer For A Traffic Ticket; Stop Foreclosure Fast; Chicago Injury Lawyer ...",
+                        "dateLastCrawled": "2018-12-13T21:34:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.6",
+                        "name": "Do you Need a Social Security Attorney? | Colorado Springs, CO",
+                        "url": "https://www.disability-benefits-help.org/social-security-attorney/colorado-springs-disability-lawyer",
+                        "displayUrl": "https://www.disability-benefits-help.org/social-security-attorney/...",
+                        "snippet": "Colorado Springs Social Security Attorney or Advocate With the guidance of an attorney or advocate in your area, you can receive the disability benefits you need to help you financially. The disability applications of Colorado Springs residents are processed in the Colorado Springs hearing office.",
+                        "dateLastCrawled": "2018-12-16T13:48:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.7",
+                        "name": "Family Law New York - lawyerery.us.com",
+                        "url": "http://lawyerery.us.com/?Family.Law.New.York",
+                        "displayUrl": "lawyerery.us.com/?Family.Law.New.York",
+                        "snippet": "Family Law New York : Call Today 24/7 Service. Over 1M Lawyers Listed. 24/7 Availability. Social Security Disability Attorney Denver Colorado; Do I Need A Lawyer For Foreclosure; Social Security Benefits Application; Chicago Personal Injury Law Firm;",
+                        "dateLastCrawled": "2018-12-14T02:32:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.8",
+                        "name": "Long Term Disability Insurance Lawyers | Frankel ...",
+                        "url": "https://www.frankelnewfield.com/",
+                        "about": [
+                            {
+                                "name": "DisabilityLawyer"
+                            }
+                        ],
+                        "displayUrl": "https://www.frankelnewfield.com",
+                        "snippet": "I saw that you waived some of the expenses. I know you didn't have to do that and wanted to send you a note to say thank you! Keep doing what you do, there are so many people out there that need an attorney like you.",
+                        "dateLastCrawled": "2018-12-17T12:24:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.9",
+                        "name": "Disability Determination Services - colorado.gov",
+                        "url": "https://www.colorado.gov/dds",
+                        "displayUrl": "https://www.colorado.gov/dds",
+                        "snippet": "Disability Determination Services (DDS) is the State Agency that makes the disability decisions for Social Security. When Social Security added protection for the disabled in 1954, the Congress wrote into the law that the disability decision had to be made by a State Agency and not by a federal office.",
+                        "dateLastCrawled": "2018-12-16T06:55:00"
+                    }
+                ]
+            },
+            "relatedSearches": {
+                "id": "https://api.cognitive.microsoft.com/api/v7/#RelatedSearches",
+                "value": [
+                    {
+                        "text": "best disability lawyers in colorado",
+                        "displayText": "best disability lawyers in colorado",
+                        "webSearchUrl": "https://www.bing.com/search?q=best+disability+lawyers+in+colorado"
+                    },
+                    {
+                        "text": "disability lawyers in colorado springs",
+                        "displayText": "disability lawyers in colorado springs",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+lawyers+in+colorado+springs"
+                    },
+                    {
+                        "text": "disability lawyers in my area",
+                        "displayText": "disability lawyers in my area",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+lawyers+in+my+area"
+                    },
+                    {
+                        "text": "disability attorneys in colorado",
+                        "displayText": "disability attorneys in colorado",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+attorneys+in+colorado"
+                    }
+                ]
+            },
+            "rankingResponse": {
+                "mainline": {
+                    "items": [
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 0,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.0"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 1,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.1"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 2,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.2"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 3,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.3"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 4,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.4"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 5,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.5"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 6,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.6"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 7,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.7"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 8,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.8"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 9,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.9"
+                            }
+                        }
+                    ]
+                },
+                "sidebar": {
+                    "items": [
+                        {
+                            "answerType": "RelatedSearches",
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#RelatedSearches"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    http_version: 
+  recorded_at: Mon, 24 Dec 2018 00:36:30 GMT
+- request:
+    method: get
+    uri: https://api.cognitive.microsoft.com/bing/v5.0/search?q=Photography+What+is+a+film+camera%3F
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Ocp-Apim-Subscription-Key:
+      - "<Ocp-Apim-Subscription-Key>"
+      User-Agent:
+      - Faraday v0.15.4
+  response:
+    status:
+      code: 200
+      message: ''
+    headers: {}
+    body:
+      encoding: UTF-8
+      string: |
+        {
+            "_type": "SearchResponse",
+            "queryContext": {
+                "originalQuery": "disabilty in colorado do i need a lawyer",
+                "alteredQuery": "disability in colorado do i need a lawyer",
+                "alterationOverrideQuery": "+disabilty in colorado do i need a lawyer",
+                "adultIntent": false
+            },
+            "webPages": {
+                "webSearchUrl": "https://www.bing.com/search?q=disabilty+in+colorado+do+i+need+a+lawyer",
+                "totalEstimatedMatches": 70400000,
+                "value": [
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.0",
+                        "name": "Colorado Social Security Disability Lawyers",
+                        "url": "https://www.disability-benefits-help.org/social-security-attorney/colorado",
+                        "displayUrl": "https://www.disability-benefits-help.org/social-security-attorney/...",
+                        "snippet": "When it comes to being awarded social security disability benefits in the state of Colorado, there are a few things applicants should consider before beginning the application process. On a national scale, SSD benefits are not easy to get. Only 32.1% of initial disability claims are awarded; that percentage is the same for the state of Colorado.",
+                        "dateLastCrawled": "2018-12-18T00:48:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.1",
+                        "name": "Denver & Colorado Social Security Disability Lawyer",
+                        "url": "https://www.sawayalaw.com/social-security-disability-attorney/",
+                        "displayUrl": "https://www.sawayalaw.com/social-security-disability-attorney",
+                        "snippet": "Our Colorado Social Security Disability attorneys will protect your rights and work hard to help you get the benefits you need. Contact our firm today for sound legal counsel and top-notch representation in your Social Security Disability claim.",
+                        "deepLinks": [
+                            {
+                                "name": "Legal Services",
+                                "url": "https://sawayalaw.com/legal-services"
+                            },
+                            {
+                                "name": "Colorado VA Disability Lawyer",
+                                "url": "https://www.sawayalaw.com/va-disabilities-lawyer/"
+                            }
+                        ],
+                        "dateLastCrawled": "2018-12-15T16:16:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.2",
+                        "name": "What Is A Criminal Defense Attorney - lawyeroid.us.com",
+                        "url": "http://lawyeroid.us.com/?WhatIsACriminalDefenseAttorney",
+                        "displayUrl": "lawyeroid.us.com/?WhatIsACriminalDefenseAttorney",
+                        "snippet": "Social Security Disability Attorney Colorado Springs Do I Need A Lawyer For A Traffic Ticket; Save My Home; What Is A Criminal Defense Attorney ...",
+                        "dateLastCrawled": "2018-12-16T07:45:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.3",
+                        "name": "Filing for Disability in Colorado: Social Security and SSI ...",
+                        "url": "https://www.disabilitysecrets.com/disability-resources-colorado.html",
+                        "displayUrl": "https://www.disabilitysecrets.com/disability-resources-colorado.html",
+                        "snippet": "Legal Services in Colorado. If you've been denied disability benefits in Colorado, you should consider hiring a disability lawyer to help you appeal. Consider hiring an experienced Social Security disability lawyer to assist you with your disability claim. You can find a local lawyer by going to our Colorado disability lawyers page.",
+                        "dateLastCrawled": "2018-12-16T07:29:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.4",
+                        "name": "Custody Case - lawyerery.us.com",
+                        "url": "http://lawyerery.us.com/?CustodyCase",
+                        "displayUrl": "lawyerery.us.com/?CustodyCase",
+                        "snippet": "Social Security Disability Attorney Colorado Springs; Do I Need A Lawyer For Bankruptcy; Wisconsin Employment Law; Custody Case",
+                        "dateLastCrawled": "2018-12-13T20:39:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.5",
+                        "name": "Loss Mitigation - lawyeropedia.us.com",
+                        "url": "http://lawyeropedia.us.com/?Loss-Mitigation",
+                        "displayUrl": "lawyeropedia.us.com/?Loss-Mitigation",
+                        "snippet": "Social Security Disability Attorney Colorado Springs Do I Need A Lawyer For A Traffic Ticket Stop Foreclosure Fast; Chicago Injury Lawyer; Loss Mitigation Is A Dui A Felony; Maryland Mesothelioma Lawyers; Social Security Disability Attorney Colorado Springs; Do I Need A Lawyer For A Traffic Ticket; Stop Foreclosure Fast; Chicago Injury Lawyer ...",
+                        "dateLastCrawled": "2018-12-13T21:34:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.6",
+                        "name": "Do you Need a Social Security Attorney? | Colorado Springs, CO",
+                        "url": "https://www.disability-benefits-help.org/social-security-attorney/colorado-springs-disability-lawyer",
+                        "displayUrl": "https://www.disability-benefits-help.org/social-security-attorney/...",
+                        "snippet": "Colorado Springs Social Security Attorney or Advocate With the guidance of an attorney or advocate in your area, you can receive the disability benefits you need to help you financially. The disability applications of Colorado Springs residents are processed in the Colorado Springs hearing office.",
+                        "dateLastCrawled": "2018-12-16T13:48:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.7",
+                        "name": "Family Law New York - lawyerery.us.com",
+                        "url": "http://lawyerery.us.com/?Family.Law.New.York",
+                        "displayUrl": "lawyerery.us.com/?Family.Law.New.York",
+                        "snippet": "Family Law New York : Call Today 24/7 Service. Over 1M Lawyers Listed. 24/7 Availability. Social Security Disability Attorney Denver Colorado; Do I Need A Lawyer For Foreclosure; Social Security Benefits Application; Chicago Personal Injury Law Firm;",
+                        "dateLastCrawled": "2018-12-14T02:32:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.8",
+                        "name": "Long Term Disability Insurance Lawyers | Frankel ...",
+                        "url": "https://www.frankelnewfield.com/",
+                        "about": [
+                            {
+                                "name": "DisabilityLawyer"
+                            }
+                        ],
+                        "displayUrl": "https://www.frankelnewfield.com",
+                        "snippet": "I saw that you waived some of the expenses. I know you didn't have to do that and wanted to send you a note to say thank you! Keep doing what you do, there are so many people out there that need an attorney like you.",
+                        "dateLastCrawled": "2018-12-17T12:24:00"
+                    },
+                    {
+                        "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.9",
+                        "name": "Disability Determination Services - colorado.gov",
+                        "url": "https://www.colorado.gov/dds",
+                        "displayUrl": "https://www.colorado.gov/dds",
+                        "snippet": "Disability Determination Services (DDS) is the State Agency that makes the disability decisions for Social Security. When Social Security added protection for the disabled in 1954, the Congress wrote into the law that the disability decision had to be made by a State Agency and not by a federal office.",
+                        "dateLastCrawled": "2018-12-16T06:55:00"
+                    }
+                ]
+            },
+            "relatedSearches": {
+                "id": "https://api.cognitive.microsoft.com/api/v7/#RelatedSearches",
+                "value": [
+                    {
+                        "text": "best disability lawyers in colorado",
+                        "displayText": "best disability lawyers in colorado",
+                        "webSearchUrl": "https://www.bing.com/search?q=best+disability+lawyers+in+colorado"
+                    },
+                    {
+                        "text": "disability lawyers in colorado springs",
+                        "displayText": "disability lawyers in colorado springs",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+lawyers+in+colorado+springs"
+                    },
+                    {
+                        "text": "disability lawyers in my area",
+                        "displayText": "disability lawyers in my area",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+lawyers+in+my+area"
+                    },
+                    {
+                        "text": "disability attorneys in colorado",
+                        "displayText": "disability attorneys in colorado",
+                        "webSearchUrl": "https://www.bing.com/search?q=disability+attorneys+in+colorado"
+                    }
+                ]
+            },
+            "rankingResponse": {
+                "mainline": {
+                    "items": [
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 0,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.0"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 1,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.1"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 2,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.2"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 3,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.3"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 4,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.4"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 5,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.5"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 6,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.6"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 7,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.7"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 8,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.8"
+                            }
+                        },
+                        {
+                            "answerType": "WebPages",
+                            "resultIndex": 9,
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#WebPages.9"
+                            }
+                        }
+                    ]
+                },
+                "sidebar": {
+                    "items": [
+                        {
+                            "answerType": "RelatedSearches",
+                            "value": {
+                                "id": "https://api.cognitive.microsoft.com/api/v7/#RelatedSearches"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    http_version: 
+  recorded_at: Mon, 24 Dec 2018 00:36:30 GMT
+recorded_with: VCR 4.0.0
