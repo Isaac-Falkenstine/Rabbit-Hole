@@ -1,21 +1,23 @@
-<%= @facade.user.first_name %> <%= @facade.user.last_name %>
+<div class="container">
+<h1> <%= @facade.user.first_name %> <%= @facade.user.last_name %>'s Topic Dashboard </h1>
 
 <div class="New_topic">
-  <%= link_to "Create New Topic", user_topics_path, action: :new  %>
-</div>
-
-<h2> Research Completed </h2>
-<div class="complete_topics">
-  <% @facade.complete_topics.each do |topic| %>
-    <%= link_to topic.title, topic_path(topic) %>
-    Research updated on <%= topic.updated_at %>
-  <% end %>
+  <%= link_to "Create New Topic", user_topics_path %>
 </div>
 
 <h2> Research In Progress </h2>
 <div class="in_progress_topics">
   <% @facade.in_progress_topics.each do |topic| %>
-    <%= link_to topic.title, topic_path(topic) %>
-    Research began on <%= topic.created_at %>
+    <h3><%= link_to topic.title, topic_path(topic) %></h3>
+    <p>Research began on <%= topic.created_at %> </p>
   <% end %>
 </div>
+
+<h2> Research Completed </h2>
+<div class="complete_topics">
+  <% @facade.complete_topics.each do |topic| %>
+    <h3><%= link_to topic.title, topic_path(topic) %></h3>
+    <p>Research updated on <%= topic.updated_at %> </p>
+  <% end %>
+</div>
+</end>
