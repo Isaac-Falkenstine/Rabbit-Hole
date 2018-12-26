@@ -1,15 +1,14 @@
 class BingService
 
   def initialize(topic)
-    @_search = nil
     @topic = topic
   end
 
-  def results(question)
+  def search_results(question)
     topic_text = topic.title
     question_text = question.title
     if question_text
-      query = topic_text.gsub(" ", "+") + " " + question_text.gsub(" ", "+") 
+      query = topic_text.gsub(" ", "+") + " " + question_text.gsub(" ", "+")
     else
       query = topic_text.gsub(" ", "+")
     end

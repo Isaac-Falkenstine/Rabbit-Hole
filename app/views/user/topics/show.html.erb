@@ -23,7 +23,7 @@
   <% if @facade.last_searched_question.id != nil  %>
     <h3>Bing results: </h3>
     <ul>
-      <% @facade.search(@facade.last_searched_question).each do |link| %>
+      <% @facade.bing_search(@facade.last_searched_question).each do |link| %>
       <li class="search_results"><%= link.name %>, <%= link.url %> </li>
       <%end%>
     </ul>
