@@ -14,7 +14,9 @@ describe 'As a visitor' do
     fill_in 'user[password]', with: password
     fill_in 'user[password_confirmation]', with: password
 
-    click_on "Register"
+    within(".submit_register") do
+      click_on "Register"
+    end
 
     expect(page).to have_content("Please check your email and password information")
   end
@@ -31,7 +33,9 @@ describe 'As a visitor' do
     fill_in 'user[password]', with: password
     fill_in 'user[password_confirmation]', with: password
 
-    click_on "Register"
+    within(".submit_register") do
+      click_on "Register"
+    end
 
     expect(page).to have_content("Registered as Abby Smith")
   end
