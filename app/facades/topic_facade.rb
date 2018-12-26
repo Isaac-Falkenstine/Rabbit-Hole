@@ -26,7 +26,7 @@ class TopicFacade
     topic.questions.new
   end
 
-  def searched_question
+  def last_searched_question
     topic.questions.last
   end
 

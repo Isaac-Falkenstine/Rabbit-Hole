@@ -1,30 +1,31 @@
 <div class="topic">
+  <h1>Learning about:</h1>
   <%=@facade.topic.title%>
+  <h1>Goal:</h1>
   <%=@facade.topic.goal%>
 </div>
 
 <div class="new_question">
   <%= form_for @facade.new_question, :url => user_topic_questions_path(@facade.topic) do |f| %>
-    <%= f.label :title, "Question" %>
     <%= f.text_field :title, size: 150 %>
-    <%= f.submit "New Question" %>
+    <%= f.submit "Ask" %>
   <% end %>
 </div>
 
-<div class="all_questions"> <p>My Questions:</p>
+<div class="all_questions">
+  <h2>Questions Asked:</h2>
   <% @facade.topic_questions.each do |question|%>
     <%= question.title %>
   <% end %>
 </div>
 
 <div class="bing_results">
-  <% if !@facade.searched_question.id  %>
-    Bing results:
-  <% @facade.search(@facade.searched_question).each do |link| %>
-    <div class="search_results">
-      <%= link.name %>
-      <%= link.url %> <br>
-    </div>
-  <% end %>
-<% end %>
+  <% if @facade.last_searched_question.id != nil  %>
+    <h3>Bing results: </h3>
+    <ul>
+      <% @facade.search(@facade.last_searched_question).each do |link| %>
+      <li class="search_results"><%= link.name %>, <%= link.url %> </li>
+      <%end%>
+    </ul>
+  <%end%>
 </div>

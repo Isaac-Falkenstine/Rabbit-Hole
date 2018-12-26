@@ -1,0 +1,26 @@
+$bgDefault      : #414d65;
+$bgHighlight    : #3b465c;
+$colDefault     : #ecf0f1;
+$colHighlight   : #61cfd4;
+$dropDown       : false;
+
+.navbar-default {
+  background: $bgDefault;
+  border-color: $bgHighlight;
+  .navbar-header{
+    .navbar-brand {
+      font-size: 2em;
+      font-family: 'Staatliches', cursive;
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+  }
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}}}
+}

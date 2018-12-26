@@ -18,29 +18,20 @@ describe 'User' do
       expect(page).to have_content(topic_1.goal)
     end
   end
-  it "can create a question" do
-    user = create(:user)
-    topic_1 = create(:topic, user_id: user.id)
-
-    visit user_topic_path(topic_1)
-
-    fill_in "Question", with: "Do I need a lawyer?"
-    click_on "New Question"
-
-    expect(page).to have_content("My Questions:")
-    expect(page).to have_content("Do I need a lawyer?")
-  end
-
-  it "Searches bing using question titles" do
+  
+  xit "can create a question" do
     user = create(:user)
     topic_1 = create(:topic, user_id: user.id, title: "Disabilty in Colorado")
 
     visit user_topic_path(topic_1)
 
-    fill_in "Question", with: "Do I need a lawyer?"
-    click_on "New Question"
+    fill_in 'question[title]', with: "Do I need a lawyer?"
+    click_on "Ask"
 
+    expect(page).to have_content("Questions Asked:")
+    expect(page).to have_content("Do I need a lawyer?")
     expect(page).to have_content("Bing results:")
     expect(page).to have_css(".search_results", count: 5)
   end
+
 end
