@@ -5,11 +5,11 @@ class TopicFacade
     @topic = topic
   end
 
-  def bing_search(question)
+  def bing_search(question, limit=5)
     raw_results = service.search_results(question)
     link_data = raw_results[:webPages][:value].map do |result|
-      bing_link.new(url: result[:url], name: result[:name], question: question, )
-    end.first(5)
+      BingLink.new(result, question: question)
+    end.first(limit)
   end
 
   def topic_questions
@@ -17,11 +17,11 @@ class TopicFacade
   end
 
   def new_question
-    topic.questions.new
+    Question.new(topic_id: topic.id)
   end
 
   def last_searched_question
-    topic.questions.last
+    topic.last_created_question
   end
 
   private

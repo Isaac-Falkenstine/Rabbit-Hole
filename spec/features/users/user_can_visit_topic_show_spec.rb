@@ -18,15 +18,18 @@ describe 'User' do
       expect(page).to have_content(topic_1.goal)
     end
   end
-  
-  xit "can create a question" do
+
+  it "can see created questions" do
     user = create(:user)
     topic_1 = create(:topic, user_id: user.id, title: "Disabilty in Colorado")
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     visit user_topic_path(topic_1)
 
     fill_in 'question[title]', with: "Do I need a lawyer?"
     click_on "Ask"
+    save_and_open_page
 
     expect(page).to have_content("Questions Asked:")
     expect(page).to have_content("Do I need a lawyer?")

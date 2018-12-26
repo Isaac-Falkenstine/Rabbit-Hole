@@ -4,4 +4,8 @@ class Topic < ApplicationRecord
 
   validates_presence_of :title
 
+  def last_created_question
+    questions.order(:created_at).first
+  end
+
 end
