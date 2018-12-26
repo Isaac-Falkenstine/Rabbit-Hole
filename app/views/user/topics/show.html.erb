@@ -5,7 +5,6 @@
 
 <div class="new_question">
   <%= form_for @facade.new_question, :url => user_topic_questions_path(@facade.topic) do |f| %>
-    <%= f.label :title, "Question" %>
     <%= f.text_field :title, size: 150 %>
     <%= f.submit "New Question" %>
   <% end %>
@@ -18,7 +17,7 @@
 </div>
 
 <div class="bing_results">
-  <% if !@facade.searched_question.id  %>
+  <% if @facade.searched_question.id != nil %>
     Bing results:
   <% @facade.search(@facade.searched_question).each do |link| %>
     <div class="search_results">

@@ -14,7 +14,7 @@ describe 'As a visitor' do
     fill_in 'user[password]', with: password
     fill_in 'user[password_confirmation]', with: password
 
-    within(".submit_register") do
+    within(".login_submit") do
       click_on "Register"
     end
 
@@ -33,7 +33,7 @@ describe 'As a visitor' do
     fill_in 'user[password]', with: password
     fill_in 'user[password_confirmation]', with: password
 
-    within(".submit_register") do
+    within(".login_submit") do
       click_on "Register"
     end
 

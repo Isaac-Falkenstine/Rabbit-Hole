@@ -7,11 +7,7 @@ describe "User can log in the APP" do
     password = "123456"
     user = create(:user, email: email, password: password)
 
-    visit '/'
-
-    click_on "Sign in"
-
-    expect(current_path).to eq(login_path)
+    visit login_path
 
     fill_in 'session[email]', with: email
     fill_in 'session[password]', with: password
@@ -30,9 +26,7 @@ describe "User can log in the APP" do
     password = "123456"
     user = create(:user, email: email, password: password)
 
-    visit '/'
-
-    click_on "Sign in"
+    visit login_path
 
     fill_in 'session[email]', with: email
     fill_in 'session[password]', with: password
@@ -41,9 +35,9 @@ describe "User can log in the APP" do
       click_on "Sign in"
     end
 
-    click_on "Log out"
+    click_on "Logout"
 
     expect(current_path).to eq(root_path)
-    expect(page).to have_content("Sign in")
+    expect(page).to have_content("Login")
   end
 end
