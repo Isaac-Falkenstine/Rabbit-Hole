@@ -8,7 +8,7 @@ class TopicFacade
   def bing_search(question)
     raw_results = service.search_results(question)
     link_data = raw_results[:webPages][:value].map do |result|
-      question.links.new(url: result[:url], name: result[:name])
+      bing_link.new(url: result[:url], name: result[:name], question: question, )
     end.first(5)
   end
 
