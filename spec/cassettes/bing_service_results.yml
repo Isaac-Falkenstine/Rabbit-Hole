@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.cognitive.microsoft.com/bing/v5.0/search?q=Photography+What+is+a+film+camera%3F
+    uri: https://api.cognitive.microsoft.com/bing/v7.0/search?q=Photography+What+is+a+film+camera%3F
     body:
       encoding: US-ASCII
       string: ''
@@ -241,10 +241,10 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Thu, 27 Dec 2018 03:59:15 GMT
+  recorded_at: Thu, 27 Dec 2018 05:06:02 GMT
 - request:
     method: get
-    uri: https://api.cognitive.microsoft.com/bing/v5.0/search?q=Photography+What+is+a+film+camera%3F
+    uri: https://api.cognitive.microsoft.com/bing/v7.0/search?q=Photography+What+is+a+film+camera%3F
     body:
       encoding: US-ASCII
       string: ''
@@ -483,10 +483,10 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Thu, 27 Dec 2018 03:59:15 GMT
+  recorded_at: Thu, 27 Dec 2018 05:06:02 GMT
 - request:
     method: get
-    uri: https://api.cognitive.microsoft.com/bing/v5.0/search?q=Photography+What+is+a+film+camera%3F
+    uri: https://api.cognitive.microsoft.com/bing/v7.0/search?q=Photography+What+is+a+film+camera%3F
     body:
       encoding: US-ASCII
       string: ''
@@ -725,10 +725,10 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Thu, 27 Dec 2018 03:59:15 GMT
+  recorded_at: Thu, 27 Dec 2018 05:06:02 GMT
 - request:
     method: get
-    uri: https://api.cognitive.microsoft.com/bing/v5.0/search?q=Photography+What+is+a+film+camera%3F
+    uri: https://api.cognitive.microsoft.com/bing/v7.0/search?q=Photography+What+is+a+film+camera%3F
     body:
       encoding: US-ASCII
       string: ''
@@ -967,10 +967,10 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Thu, 27 Dec 2018 03:59:15 GMT
+  recorded_at: Thu, 27 Dec 2018 05:06:02 GMT
 - request:
     method: get
-    uri: https://api.cognitive.microsoft.com/bing/v5.0/search?q=Photography+What+is+a+film+camera%3F
+    uri: https://api.cognitive.microsoft.com/bing/v7.0/search?q=Photography+What+is+a+film+camera%3F
     body:
       encoding: US-ASCII
       string: ''
@@ -1209,5 +1209,5 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Thu, 27 Dec 2018 03:59:15 GMT
+  recorded_at: Thu, 27 Dec 2018 05:06:02 GMT
 recorded_with: VCR 4.0.0
