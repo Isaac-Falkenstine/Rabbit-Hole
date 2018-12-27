@@ -13,7 +13,7 @@ class BingService
     else
       query = topic_text.gsub(" ", "+")
     end
-    get_json("/bing/v7.0/search?q=#{query}")
+    get_json("/bing/v5.0/search?q=#{query}")
   end
 
   private
