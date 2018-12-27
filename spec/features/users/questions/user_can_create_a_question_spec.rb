@@ -1,7 +1,15 @@
 require 'rails_helper'
 
 describe 'User' do
+
   describe 'visits topic show page' do
+
+    before(:each) do
+      stub_request(:get, /api.cognitive.microsoft.com/).
+        with(headers: {'Ocp-Apim-Subscription-Key'=>ENV['BING_API_KEY']}).
+        to_return(body: File.read("./spec/fixtures/bing_search_results.json"))
+    end
+
     it "can create a question" do
       user = create(:user)
       topic_1 = create(:topic, user: user, title: "Disabilty in Colorado")

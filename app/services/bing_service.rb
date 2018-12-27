@@ -1,23 +1,14 @@
 class BingService
+  attr_reader :topic
 
   def initialize(topic)
     @topic = topic
   end
 
   def search_results(question)
-    topic_text = topic.title
-    question_text = question.title
-    if question_text
-      query = topic_text.gsub(" ", "+") + " " + question_text.gsub(" ", "+")
-    else
-      query = topic_text.gsub(" ", "+")
-    end
-    get_json("/bing/v5.0/search?q=#{query}")
+    query = topic.title.gsub(" ", "+") + "+" + question.title.gsub(" ", "+")
+    json = get_json("/bing/v5.0/search?q=#{query}")
   end
-
-  private
-
-  attr_reader :topic
 
    def get_json(uri)
     response = conn.get(uri)

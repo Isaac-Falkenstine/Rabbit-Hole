@@ -5,6 +5,10 @@ class TopicFacade
     @topic = topic
   end
 
+  def current_question
+    last_searched_question
+  end
+
   def bing_search(question, limit=5)
     raw_results = service.search_results(question)
     link_data = raw_results[:webPages][:value].map do |result|
@@ -24,18 +28,14 @@ class TopicFacade
     topic.last_created_question
   end
 
-  private
+  def topic_has_questions
+    topic.has_questions
+  end
+
+private
 
   def service
-   @service ||= BingService.new(topic)
+   service = BingService.new(topic)
   end
 
 end
-
-# class QuestionResult < SimpleDelegator
-#   def results
-#     search_client.results(self).map do |raw_result|
-#       Result.new(raw_result)
-#     end
-#   end
-# end

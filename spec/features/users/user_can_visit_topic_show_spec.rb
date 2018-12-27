@@ -2,6 +2,13 @@ require 'rails_helper'
 
 describe 'User' do
   describe 'can visit topic page' do
+
+  before(:each) do
+      stub_request(:get, /api.cognitive.microsoft.com/).
+        with(headers: {'Ocp-Apim-Subscription-Key'=>ENV['BING_API_KEY']}).
+        to_return(body: File.read("./spec/fixtures/bing_search_results.json"))
+    end
+
     it 'can see their topics' do
       user = create(:user)
       topic_1 = create(:topic, user_id: user.id)
@@ -29,7 +36,6 @@ describe 'User' do
 
     fill_in 'question[title]', with: "Do I need a lawyer?"
     click_on "Ask"
-    save_and_open_page
 
     expect(page).to have_content("Questions Asked:")
     expect(page).to have_content("Do I need a lawyer?")
