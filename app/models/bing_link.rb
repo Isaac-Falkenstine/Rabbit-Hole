@@ -1,10 +1,10 @@
 class BingLink < SimpleDelegator
-  attr_reader  :name,
+  attr_reader  :title,
                :url,
                :question
 
   def initialize(link_data, question)
-    @name = link_data[:name]
+    @title = link_data[:name]
     @url = link_data[:url]
     @question = question
   end

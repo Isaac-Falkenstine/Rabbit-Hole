@@ -5,7 +5,7 @@ class Topic < ApplicationRecord
   validates_presence_of :title
 
   def last_created_question
-    questions.order(:created_at).first
+    questions.order(:created_at).last
   end
 
   def has_questions

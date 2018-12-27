@@ -6,7 +6,7 @@ class TopicFacade
   end
 
   def current_question
-    last_searched_question
+    topic.last_created_question
   end
 
   def bing_search(question, limit=5)

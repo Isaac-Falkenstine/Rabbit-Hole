@@ -7,7 +7,7 @@ class BingService
 
   def search_results(question)
     query = topic.title.gsub(" ", "+") + "+" + question.title.gsub(" ", "+")
-    json = get_json("/bing/v5.0/search?q=#{query}")
+    json = get_json("/bing/v7.0/search?q=#{query}")
   end
 
    def get_json(uri)
