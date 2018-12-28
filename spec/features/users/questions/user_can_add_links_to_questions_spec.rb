@@ -23,9 +23,22 @@ describe "a user visits a topic show page" do
 
       expect(page).to have_content "Saved Links"
 
-      within(".saved_links") do
+      within(".all_saved_links") do
         expect(page).to have_content @link_1.name
         expect(page).to have_content @link_2.name
+      end
+    end
+
+    it "allows me to add a new link" do
+      visit user_topic_path(@topic)
+      click_on @question_1.title
+
+      within(".all_saved_links") do
+        click_on "Add new link"
+        fill_in "link[name]", with: "New link"
+        fill_in "link[url]", with: "newlink.com"
+        fill_in "link[description]", with: "testing a new link"
+        click_on "Save"
       end
     end
   end

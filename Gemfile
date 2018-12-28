@@ -36,7 +36,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'webpacker', '~> 3.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'jquery'
+gem 'jquery-rails'
+gem 'popper_js', '~> 1.14.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

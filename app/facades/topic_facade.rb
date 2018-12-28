@@ -15,6 +15,10 @@ class TopicFacade
     end
   end
 
+  def current_question_links
+    current_question.links
+  end
+
   def bing_search(question, limit=5)
     raw_results = service.search_results(question)
     link_data = raw_results[:webPages][:value].map do |result|
