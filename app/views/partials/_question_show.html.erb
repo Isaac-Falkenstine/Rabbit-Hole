@@ -1,6 +1,5 @@
 <div class="container">
 <h2><%= @facade.current_question.title %></h2>
-
 <div class="bing_results">
   <h3>Bing results: </h3>
     <% @facade.bing_search(@facade.current_question).each do |link| %>
