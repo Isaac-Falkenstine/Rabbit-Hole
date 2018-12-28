@@ -34,7 +34,8 @@ class User::TopicsController < ApplicationController
       flash[:notice] = "Topic created"
       redirect_to user_topic_path(topic)
     else
-      flash[:error] = "Topic couldn't be save, fill all the forms"
+      redirect_to new_user_topic_path
+      flash[:error] = "Topic couldn't be saved, fill all the forms"
     end
   end
 
