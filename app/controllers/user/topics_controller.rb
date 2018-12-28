@@ -25,7 +25,7 @@ class User::TopicsController < ApplicationController
     else
       topic.update(status: 1)
     end
-    redirect_to user_dashboard_path
+    redirect_to dashboard_path
   end
 
   def create

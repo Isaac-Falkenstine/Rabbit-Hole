@@ -14,7 +14,7 @@ describe "User" do
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit user_dashboard_path
+    visit dashboard_path
 
     expect(page).to have_content("Status: enable")
 
@@ -34,7 +34,7 @@ describe "User" do
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit user_dashboard_path
+    visit dashboard_path
     
     expect(page).to have_content("Status: disable")
 
