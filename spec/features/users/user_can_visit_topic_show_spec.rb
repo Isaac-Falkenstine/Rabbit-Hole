@@ -17,7 +17,7 @@ describe 'User' do
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-     visit user_dashboard_path
+     visit dashboard_path
       click_on topic_1.title
 
       expect(current_path).to eq(user_topic_path(topic_1))

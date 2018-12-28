@@ -11,14 +11,15 @@ Rails.application.routes.draw do
   get '/register', to: "users#new"
   post '/register', to: "users#create"
 
- resources :users, only: [:create]
+  get '/dashboard', to: "users#show", as: "dashboard"
 
-    namespace :user do
-        get '/dashboard', to: "topics#index", as: "/dashboard"
-      resources :topics,  only: [:new, :create, :show]  do 
-        resources :questions, only: [:new, :create]
+  resources :users, only: [:create]
+
+  namespace :user do
+    resources :topics,  only: [:new, :create, :show] do
+      resources :questions, only: [:new, :create]
+      get '/:id', to: "topics#show", as: "question"
     end
   end
-
 
 end

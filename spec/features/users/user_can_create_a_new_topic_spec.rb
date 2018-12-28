@@ -14,7 +14,7 @@ describe "User can create a new topic" do
     user = create(:user)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-    visit user_dashboard_path
+    visit dashboard_path
     click_on "Create New Topic"
 
     expect(current_path).to eq(new_user_topic_path)

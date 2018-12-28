@@ -12,12 +12,12 @@ class GoogleOauthController < ApplicationController
         session[:user_id] = user.id
         user.google_oauth_token.update(refresh_token: refresh_token) if refresh_token.present?
         flash[:notice] = "You have successfully logged in!"
-        redirect_to user_dashboard_path
+        redirect_to dashboard_path
       elsif user.save
         GoogleOauthToken.create(token: data.credentials.token, user: user, refresh_token: refresh_token)
         session[:user_id] = user.id
         flash[:notice] = "Account Created!"
-        redirect_to user_dashboard_path
+        redirect_to dashboard_path
       else
         flash[:notice] = "Google Authorization was unable to be completed."
       end
