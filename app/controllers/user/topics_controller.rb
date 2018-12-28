@@ -20,10 +20,12 @@ class User::TopicsController < ApplicationController
 
   def update
     topic = Topic.find(params[:id])
-    if topic.enable?
-      topic.update(status: 0)
+    if update_params[:status]
+      topic.update(status: update_params[:status].to_i)
+    elsif update_params[:complete]
+      topic.update(complete: true)
     else
-      topic.update(status: 1)
+      
     end
     redirect_to dashboard_path
   end
@@ -42,6 +44,10 @@ class User::TopicsController < ApplicationController
 
   def topic_params
     params.require(:topic).permit(:title, :goal)
+  end
+
+  def update_params
+    params.require(:topic).permit(:status, :complete)
   end
 
 end
