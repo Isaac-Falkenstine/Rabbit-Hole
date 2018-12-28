@@ -30,9 +30,9 @@
                   </td>
                   <td>
                     <% if topic.enable? %>
-                      <%= button_to "Disable",user_topic_path(topic) %>
+                      <%= button_to "Disable", user_topic_path(topic), method: :put %>
                     <% else %>
-                      <%= button_to "Enable",user_topic_path(topic) %>
+                      <%= button_to "Enable", user_topic_path(topic), method: :put %>
                     <% end  %>
                   </td>
                 </tr>

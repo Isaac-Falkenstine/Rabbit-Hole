@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
     namespace :user do
         get '/dashboard', to: "topics#index", as: "/dashboard"
-      resources :topics,  only: [:new, :create, :show]  do 
+      resources :topics,  only: [:new, :create, :show, :update]  do
         resources :questions, only: [:new, :create]
     end
   end
