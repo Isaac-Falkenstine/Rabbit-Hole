@@ -25,8 +25,9 @@
                   <td>
                     Status: <%= topic.status %>
                   </td>
+                  
                   <td>
-                    Research began on <%=topic.created_at %>
+                    Research began on <%=topic.created_at_format %>
                   </td>
                   <td>
                     <% if topic.enable? %>
@@ -66,7 +67,7 @@
                     <%= link_to topic.title,user_topic_path(topic) %>
                   </td>
                   <td>
-                    Research updated on <%=topic.updated_at %>
+                    Research updated on <%=topic.updated_at_format %>
                   </td>
                 </tr>
                 <%end%>
