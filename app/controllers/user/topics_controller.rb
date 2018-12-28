@@ -18,6 +18,13 @@ class User::TopicsController < ApplicationController
     end
   end
 
+  def update
+    topic = Topic.find(params[:id])
+    topic.update(complete: true)
+    redirect_to dashboard_path
+    
+  end
+
   def create
     topic = current_user.topics.create(topic_params)
     if topic.save

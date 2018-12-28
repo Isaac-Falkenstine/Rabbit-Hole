@@ -7,7 +7,7 @@
 
 <div class="new_question">
   <%= form_for @facade.new_question, url: user_topic_questions_path(@facade.topic) do |f| %>
-    <%= f.text_field :title, size: 150 %>
+    <%= f.text_field :title, size: 100 %>
     <%= f.submit "Ask" %>
   <% end %>
 </div>
@@ -34,4 +34,9 @@
   <% @facade.topic_questions.each do |question|%>
     <%= link_to "#{question.title}", user_topic_question_path(@facade.topic.id, question_id: question.id) %> <br>
   <% end %>
+</div>
+
+<div class="complete_topic">
+  <h2>If your journey is complete and your goal achieved</h2>
+  <%= button_to "Complete Topic", user_topic_path(@facade.topic), method: :put %>
 </div>
