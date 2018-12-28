@@ -32,6 +32,6 @@
 <div class="all_questions">
   <h2>Questions Asked:</h2>
   <% @facade.topic_questions.each do |question|%>
-    <%= question.title %> <br>
+    <%= link_to "#{question.title}", user_topic_question_path(@facade.topic.id, question_id: question.id) %> <br>
   <% end %>
 </div>

@@ -1,12 +1,18 @@
 class TopicFacade
-  attr_reader :topic
+  attr_reader :topic,
+              :main_question
 
-  def initialize(topic)
+  def initialize(topic, main_question=nil)
     @topic = topic
+    @main_question = main_question
   end
 
   def current_question
-    topic.last_created_question
+    if main_question == nil
+      topic.last_created_question
+    else
+      main_question
+    end
   end
 
   def bing_search(question, limit=5)
@@ -22,10 +28,6 @@ class TopicFacade
 
   def new_question
     Question.new(topic_id: topic.id)
-  end
-
-  def last_searched_question
-    topic.last_created_question
   end
 
   def topic_has_questions

@@ -22,7 +22,7 @@ describe 'As a visitor' do
     click_on "Register with Google"
 
     expect(page).to have_content("John Doe")
-    expect(current_path).to eq user_dashboard_path
+    expect(current_path).to eq dashboard_path
     expect(page).to have_content("Account Created!")
   end
 

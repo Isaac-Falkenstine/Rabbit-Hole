@@ -16,7 +16,7 @@ describe "User can log in the APP" do
       click_on "Sign in"
     end
 
-    expect(current_path).to eq(user_dashboard_path)
+    expect(current_path).to eq(dashboard_path)
     expect(page).to have_content("#{user.first_name} #{user.last_name}")
     expect(page).to_not have_content("Sign in")
   end
