@@ -17,8 +17,7 @@ Rails.application.routes.draw do
 
   namespace :user do
     resources :topics,  only: [:new, :create, :show] do
-      resources :questions, only: [:new, :create]
-      get '/:id', to: "topics#show", as: "question"
+      resources :questions, only: [:new, :create, :show]
     end
   end
 

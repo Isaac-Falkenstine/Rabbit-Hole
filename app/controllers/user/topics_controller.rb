@@ -8,9 +8,9 @@ class User::TopicsController < ApplicationController
   end
 
   def show
-    if params[:topic_id]
-      topic = Topic.find(params[:topic_id])
-      question = Question.find(params[:id])
+    if params[:q_id]
+      topic = Topic.find(params[:id])
+      question = Question.find(params[:q_id])
       @facade = TopicFacade.new(topic, question)
     else
       topic = Topic.find(params[:id])
@@ -33,5 +33,5 @@ class User::TopicsController < ApplicationController
   def topic_params
     params.require(:topic).permit(:title, :goal)
   end
-  
+
 end
