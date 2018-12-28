@@ -18,6 +18,16 @@ class User::TopicsController < ApplicationController
     end
   end
 
+  def update
+    topic = Topic.find(params[:id])
+    if topic.enable?
+      topic.update(status: 0)
+    else
+      topic.update(status: 1)
+    end
+    redirect_to user_dashboard_path
+  end
+
   def create
     topic = current_user.topics.create(topic_params)
     if topic.save
