@@ -6,26 +6,32 @@
 </div>
 
 <div class="new_question">
-  <%= form_for @facade.new_question, :url => user_topic_questions_path(@facade.topic) do |f| %>
+  <%= form_for @facade.new_question, url: user_topic_questions_path(@facade.topic) do |f| %>
     <%= f.text_field :title, size: 150 %>
     <%= f.submit "Ask" %>
   <% end %>
 </div>
 
+<div class="question_show">
+  <% if @facade.topic_has_questions %>
+  <div class="container">
+  <h2><%= @facade.current_question.title %></h2>
+  <div class="bing_results">
+    <h3>Bing results: </h3>
+      <% @facade.bing_search(@facade.current_question).each do |link| %>
+        <div class="search_results">
+          <%= link_to "#{link.title}", link.url %> <br>
+        </div>
+      <%end%>
+  </div>
+  <%else%>
+    <p>Ask a question to get started.</p>
+  <%end%>
+</div>
+
 <div class="all_questions">
   <h2>Questions Asked:</h2>
   <% @facade.topic_questions.each do |question|%>
-    <%= question.title %>
+    <%= link_to "#{question.title}", user_topic_question_path(@facade.topic.id, question_id: question.id) %> <br>
   <% end %>
-</div>
-
-<div class="bing_results">
-  <% if @facade.last_searched_question.id != nil  %>
-    <h3>Bing results: </h3>
-    <ul>
-      <% @facade.search(@facade.last_searched_question).each do |link| %>
-      <li class="search_results"><%= link.name %>, <%= link.url %> </li>
-      <%end%>
-    </ul>
-  <%end%>
 </div>

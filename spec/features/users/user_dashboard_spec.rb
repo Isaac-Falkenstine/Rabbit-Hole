@@ -10,7 +10,7 @@ describe 'User' do
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-      visit user_dashboard_path
+      visit dashboard_path
 
       expect(page).to have_content(topic_1.title)
       expect(page).to have_content(topic_2.title)
@@ -26,7 +26,7 @@ describe 'User' do
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-      visit user_dashboard_path
+      visit dashboard_path
 
       within(".complete_topics") do
         expect(page).to have_content(topic_1.title)
@@ -40,13 +40,17 @@ describe 'User' do
     end
 
     it 'can click on a topic to get to its show page' do
+
+        stub_request(:get, /api.cognitive.microsoft.com/).
+          with(headers: {'Ocp-Apim-Subscription-Key'=>ENV['BING_API_KEY']}).
+          to_return(body: File.read("./spec/fixtures/bing_search_results.json"))
+
       user = create(:user)
       topic_1 = create(:topic, user_id: user.id)
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-      visit user_dashboard_path
-
+      visit dashboard_path
       click_on topic_1.title
 
       expect(current_path).to eq(user_topic_path(topic_1))

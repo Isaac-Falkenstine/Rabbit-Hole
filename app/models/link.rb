@@ -1,7 +1,9 @@
 class Link < ApplicationRecord
+  attr_reader  :name,
+               :url
+
   belongs_to :question, dependent: :destroy
 
-  validates_presence_of :name, :url, :status
+  validates_presence_of :name, :url
 
-  enum status: [:ignore, :selected, :skiped]
 end

@@ -2,6 +2,13 @@ require 'rails_helper'
 
 describe 'User' do
   describe 'can visit topic page' do
+
+  before(:each) do
+      stub_request(:get, /api.cognitive.microsoft.com/).
+        with(headers: {'Ocp-Apim-Subscription-Key'=>ENV['BING_API_KEY']}).
+        to_return(body: File.read("./spec/fixtures/bing_search_results.json"))
+    end
+
     it 'can see their topics' do
       user = create(:user)
       topic_1 = create(:topic, user_id: user.id)
@@ -10,7 +17,7 @@ describe 'User' do
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
-     visit user_dashboard_path
+     visit dashboard_path
       click_on topic_1.title
 
       expect(current_path).to eq(user_topic_path(topic_1))
@@ -18,10 +25,12 @@ describe 'User' do
       expect(page).to have_content(topic_1.goal)
     end
   end
-  
-  xit "can create a question" do
+
+  it "can see created questions" do
     user = create(:user)
     topic_1 = create(:topic, user_id: user.id, title: "Disabilty in Colorado")
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     visit user_topic_path(topic_1)
 

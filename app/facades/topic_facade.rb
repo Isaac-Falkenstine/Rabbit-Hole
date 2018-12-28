@@ -1,46 +1,43 @@
 class TopicFacade
-  attr_reader :topic
+  attr_reader :topic,
+              :main_question
 
-  def initialize(topic)
+  def initialize(topic, main_question=nil)
     @topic = topic
+    @main_question = main_question
   end
 
-  def search(question)
-    raw_results = service.results(question)
+  def current_question
+    if main_question == nil
+      topic.last_created_question
+    else
+      main_question
+    end
+  end
+
+  def bing_search(question, limit=5)
+    raw_results = service.search_results(question)
     link_data = raw_results[:webPages][:value].map do |result|
-      question.links.new(url: result[:url], name: result[:name])
-    end.first(5)
+      BingLink.new(result, question: question)
+    end.first(limit)
   end
 
   def topic_questions
     topic.questions
   end
 
-  def search_links(link_data, question)
-    link_data.map do |link|
-      question.links.create(url: link.first, name: link.last)
-    end
-  end
-
   def new_question
-    topic.questions.new
+    Question.new(topic_id: topic.id)
   end
 
-  def last_searched_question
-    topic.questions.last
+  def topic_has_questions
+    topic.has_questions
   end
 
-  private
+private
 
   def service
-   BingService.new(topic)
+   service = BingService.new(topic)
   end
-end
 
-# class QuestionResult < SimpleDelegator
-#   def results
-#     search_client.results(self).map do |raw_result|
-#       Result.new(raw_result)
-#     end
-#   end
-# end
+end

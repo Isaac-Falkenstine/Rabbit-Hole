@@ -5,12 +5,27 @@ class User::TopicsController < ApplicationController
   end
 
   def index
-    @facade = UserDashboardFacade.new(current_user)
   end
 
   def show
+    if params[:q_id]
+      topic = Topic.find(params[:id])
+      question = Question.find(params[:q_id])
+      @facade = TopicFacade.new(topic, question)
+    else
+      topic = Topic.find(params[:id])
+      @facade = TopicFacade.new(topic)
+    end
+  end
+
+  def update
     topic = Topic.find(params[:id])
-    @facade = TopicFacade.new(topic)
+    if topic.enable?
+      topic.update(status: 0)
+    else
+      topic.update(status: 1)
+    end
+    redirect_to dashboard_path
   end
 
   def create
@@ -28,4 +43,5 @@ class User::TopicsController < ApplicationController
   def topic_params
     params.require(:topic).permit(:title, :goal)
   end
+
 end

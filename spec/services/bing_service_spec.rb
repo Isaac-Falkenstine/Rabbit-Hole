@@ -18,11 +18,11 @@ describe 'BingService' do
           question = create(:question, title: "What is a film camera?", topic: topic)
           service = BingService.new(topic)
 
-          expect(service.results(question)).to be_a(Hash)
-          expect(service.results(question)).to have_key(:webPages)
-          expect(service.results(question)[:webPages]).to have_key(:value)
-          expect(service.results(question)[:webPages][:value].first).to have_key(:name)
-          expect(service.results(question)[:webPages][:value].first).to have_key(:url)
+          expect(service.search_results(question)).to be_a(Hash)
+          expect(service.search_results(question)).to have_key(:webPages)
+          expect(service.search_results(question)[:webPages]).to have_key(:value)
+          expect(service.search_results(question)[:webPages][:value].first).to have_key(:name)
+          expect(service.search_results(question)[:webPages][:value].first).to have_key(:url)
         end
       end
     end

@@ -4,5 +4,6 @@ FactoryBot.define do
     sequence :title   { |n| "Topic number#{n}" }
     sequence :goal { |n| "complete_this_thing#{n}" }
     complete { false }
+    status { 1 }
   end
 end
