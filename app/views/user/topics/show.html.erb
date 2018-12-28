@@ -38,5 +38,5 @@
 
 <div class="complete_topic">
   <h2>If your journey is complete and your goal achieved</h2>
-  <%= button_to "Complete Topic", user_topic_path(@facade.topic), method: :put %>
+  <%= button_to "Complete Topic", user_topic_path(@facade.topic), :params => {:topic => { complete: true}}, method: :put %>
 </div>

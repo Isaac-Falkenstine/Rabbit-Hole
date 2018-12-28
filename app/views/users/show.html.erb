@@ -25,15 +25,15 @@
                   <td>
                     Status: <%= topic.status %>
                   </td>
-                  
+
                   <td>
                     Research began on <%=topic.created_at_format %>
                   </td>
                   <td>
                     <% if topic.enable? %>
-                      <%= button_to "Disable", user_topic_path(topic), method: :put %>
+                      <%= button_to "Disable", user_topic_path(topic), :params => {:topic => { status: 0}}, method: :put %>
                     <% else %>
-                      <%= button_to "Enable", user_topic_path(topic), method: :put %>
+                      <%= button_to "Enable", user_topic_path(topic), :params => {:topic => { status: 1}}, method: :put %>
                     <% end  %>
                   </td>
                 </tr>
