@@ -22,6 +22,8 @@ class User::TopicsController < ApplicationController
     topic = Topic.find(params[:id])
     if topic.enable?
       topic.update(status: 0)
+    elsif
+      topic.update(complete: true)
     else
       topic.update(status: 1)
     end
