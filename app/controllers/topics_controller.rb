@@ -1,5 +1,5 @@
-class TopicsController < ApplicationController
-  def show
+# class TopicsController < ApplicationController
+#   def show
 
-  end
-end
+#   end
+# end

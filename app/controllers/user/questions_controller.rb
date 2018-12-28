@@ -1,18 +1,18 @@
-class User::QuestionsController < ApplicationController
-  def new
-    @question = Question.new
-  end
+# class User::QuestionsController < ApplicationController
+#   def new
+#     @question = Question.new
+#   end
 
-  def create
-    topic = Topic.find(params[:topic_id])
-    question = topic.questions.create(question_params)
+#   def create
+#     topic = Topic.find(params[:topic_id])
+#     question = topic.questions.create(question_params)
 
-    redirect_to user_topic_path(topic)
-  end
+#     redirect_to user_topic_path(topic)
+#   end
 
-  private
+#   private
 
-  def question_params
-    params.require(:question).permit(:title)
-  end
-end
+#   def question_params
+#     params.require(:question).permit(:title)
+#   end
+# end
