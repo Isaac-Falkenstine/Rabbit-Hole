@@ -3,6 +3,7 @@
   <%=@facade.topic.title%>
   <h1>Goal:</h1>
   <%=@facade.topic.goal%>
+  <%= render 'partials/topic_notes' %>
 </div>
 
 <div class="new_question">
@@ -14,16 +15,8 @@
 
 <div class="question_show">
   <% if @facade.topic_has_questions %>
-  <div class="container">
-  <h2><%= @facade.current_question.title %></h2>
-  <div class="bing_results">
-    <h3>Bing results: </h3>
-      <% @facade.bing_search(@facade.current_question).each do |link| %>
-        <div class="search_results">
-          <%= link_to "#{link.title}", link.url %> <br>
-        </div>
-      <%end%>
-  </div>
+  <%= render 'partials/question_show' %>
+  <%= render 'partials/question_notes' %>
   <%else%>
     <p>Ask a question to get started.</p>
   <%end%>
@@ -40,5 +33,3 @@
   <h2>If your journey is complete and your goal achieved</h2>
   <%= button_to "Complete Topic", user_topic_path(@facade.topic), :params => {:topic => { complete: true}}, method: :put %>
 </div>
-
-<%= render './partials/notes' %>

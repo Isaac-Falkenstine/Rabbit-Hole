@@ -12,7 +12,8 @@ GoogleOauthToken.create(token: ENV["token"], refresh_token: ENV["refresh_token"]
 topic_1 = Topic.create(title: "How to make a Youtube video",
                     goal: "To create a well edited Youtube video that I can be proud of",
                     complete: true,
-                    user_id: user.id)
+                    user_id: user.id,
+                    topic_notes: "It seems to be successful on youtube I'll need a nice camrea and to pay for a editing software.")
 
 question_1 = Question.create(title: "What editing software should I use?",
                             notes_text: "After research I've found that Sony Vegas Pro seems to be the best editing software, but Final Cut Pro is really popular for MacOS users.",
@@ -38,7 +39,8 @@ link_2 = Link.create(url: "https://www.imaging-resource.com/cameras/canon/70d/vs
 topic_2 = Topic.create(title: "How to set up a P.O. box.",
                     goal: "To make a P.O. box so I can receive mail for my business.",
                     complete: false,
-                    user_id: user.id)
+                    user_id: user.id,
+                    topic_notes: "It looks like it will cost me some money to get a P.O. box and I'll need to redirect my mail.")
 
 question_3 = Question.create(title: "What are the steps I need to take?",
                             notes_text: "Step 1. Pick a PO Box Location and Size, Step 2. Get a PO Box, Step 3. Redirect Your Mail",

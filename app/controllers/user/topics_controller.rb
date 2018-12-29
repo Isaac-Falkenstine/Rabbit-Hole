@@ -11,23 +11,28 @@ class User::TopicsController < ApplicationController
     if params[:q_id]
       topic = Topic.find(params[:id])
       question = Question.find(params[:q_id])
-      @facade = TopicFacade.new(topic, question)
+      @facade = TopicFacade.new(topic, question, user)
     else
       topic = Topic.find(params[:id])
-      @facade = TopicFacade.new(topic)
+      @facade = TopicFacade.new(topic, user)
     end
   end
 
   def update
     topic = Topic.find(params[:id])
     if update_params[:status]
-      topic.update(status: update_params[:status].to_i)
+      topic.update(status: update_params[:status].to_i, topic_notes: params[:topic_notes])
     elsif update_params[:complete]
-      topic.update(complete: true)
+      topic.update(complete: true, topic_notes: params[:topic_notes])
     else
-      
+      topic.update(topic_notes: params[:topic_notes])
     end
-    redirect_to dashboard_path
+
+    if params[:topic_notes]
+      redirect_to user_topic_path(topic)
+    else
+      redirect_to dashboard_path
+    end
   end
 
   def create
@@ -42,12 +47,13 @@ class User::TopicsController < ApplicationController
 
   private
 
+  attr_reader :user
+
   def topic_params
     params.require(:topic).permit(:title, :goal)
   end
 
   def update_params
-    params.require(:topic).permit(:status, :complete)
+    params.fetch(:topic, {}).permit(:status, :complete)
   end
-
 end
