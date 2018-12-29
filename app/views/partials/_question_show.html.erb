@@ -14,8 +14,7 @@
 <div class="all_saved_links">
   <h3>Saved Links</h3>
 
-  <%= link_to 'Add new link', new_user_topic_question_link_path(@facade.topic, @facade.current_question), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'} %>
-
+  <%= link_to 'Add new link', "/user/topics/#{@facade.topic.id}/questions/#{@facade.current_question.id}/links/new.js", remote: true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary' %>
 
 <div id="modal-window" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -25,7 +24,7 @@
 
   <% @facade.current_question_links.each do |link| %>
     <div class="saved_link">
-      <%= link_to "#{link.name}", link.url %> <br>
+      <%= link_to "#{link.name}", "http://#{link.url}" %> <br>
     </div>
   <%end%>
 </div>

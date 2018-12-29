@@ -15,6 +15,8 @@ describe "a user visits a topic show page" do
 
       @question_2 = create(:question, topic: @topic, title: "Do I need a doctor note?", created_at: date)
       @question_3 = create(:question, topic: @topic, title: "Does it cost money?", created_at: date_2)
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
 
     it "sees a section for my links showing links I've created" do
@@ -29,17 +31,25 @@ describe "a user visits a topic show page" do
       end
     end
 
-    it "allows me to add a new link" do
+    it "allows me to add a new link", js: true do
       visit user_topic_path(@topic)
       click_on @question_1.title
 
-      within(".all_saved_links") do
-        click_on "Add new link"
-        fill_in "link[name]", with: "New link"
-        fill_in "link[url]", with: "newlink.com"
-        fill_in "link[description]", with: "testing a new link"
-        click_on "Save"
+      click_on "Add new link"
+      expect(page).to have_content("Add a link to the current question")
+
+      inputs = all('input[type="text"]')
+
+      within("#new_link_form") do
+        inputs[0].set("example link")
+        inputs[1].set("example url")
       end
+
+      click_on "Create link"
+
+      topic_1 = Topic.find(@topic.id)
+
+      expect(@question_1.links.count).to eq 3
     end
   end
 end

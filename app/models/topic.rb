@@ -22,4 +22,8 @@ class Topic < ApplicationRecord
     self.updated_at.strftime("%a, %d %B of %Y")
   end
 
+  def in_progress
+    true if self.complete == false
+  end
+
 end

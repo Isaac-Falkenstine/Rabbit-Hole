@@ -3,6 +3,12 @@
   <%=@facade.topic.title%>
   <h1>Goal:</h1>
   <%=@facade.topic.goal%>
+
+  <% if @facade.topic_in_progress %>
+    <%= button_to "Research Complete", user_topic_path(@facade.topic), :params => {:topic => { complete: true }}, method: :put %>
+  <% else %>
+    <%= button_to "Reopen Research", user_topic_path(@facade.topic), :params => {:topic => { complete: false }}, method: :put %>
+  <%end %>
 </div>
 
 <div class="new_question">
@@ -25,9 +31,4 @@
   <% @facade.topic_questions.each do |question|%>
     <%= link_to "#{question.title}", user_topic_question_path(@facade.topic.id, question_id: question.id) %> <br>
   <% end %>
-</div>
-
-<div class="complete_topic">
-  <h2>If your journey is complete and your goal achieved</h2>
-  <%= button_to "Complete Topic", user_topic_path(@facade.topic), :params => {:topic => { complete: true}}, method: :put %>
 </div>

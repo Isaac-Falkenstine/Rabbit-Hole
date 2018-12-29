@@ -23,18 +23,10 @@
                     <%= link_to topic.title,user_topic_path(topic) %>
                   </td>
                   <td>
-                    Status: <%= topic.status %>
-                  </td>
-
-                  <td>
                     Research began on <%=topic.created_at_format %>
                   </td>
                   <td>
-                    <% if topic.enable? %>
-                      <%= button_to "Disable", user_topic_path(topic), :params => {:topic => { status: 0}}, method: :put %>
-                    <% else %>
-                      <%= button_to "Enable", user_topic_path(topic), :params => {:topic => { status: 1}}, method: :put %>
-                    <% end  %>
+                    <%= button_to "Research Complete", user_topic_path(topic), :params => {:topic => { complete: true }}, method: :put %>
                   </td>
                 </tr>
                 <%end%>
@@ -62,12 +54,15 @@
                 </thead>
                 <tbody>
                   <%@facade.complete_topics.each do |topic| %>
-                  <tr>
+                  <tr class="topic_link">
                   <td class="complete_research">
                     <%= link_to topic.title,user_topic_path(topic) %>
                   </td>
                   <td>
                     Research updated on <%=topic.updated_at_format %>
+                  </td>
+                  <td>
+                    <%= button_to "Reopen Research", user_topic_path(topic), :params => {:topic => { complete: false }}, method: :put %>
                   </td>
                 </tr>
                 <%end%>

@@ -20,13 +20,7 @@ class User::TopicsController < ApplicationController
 
   def update
     topic = Topic.find(params[:id])
-    if update_params[:status]
-      topic.update(status: update_params[:status].to_i)
-    elsif update_params[:complete]
-      topic.update(complete: true)
-    else
-      
-    end
+    topic.update(update_params)
     redirect_to dashboard_path
   end
 

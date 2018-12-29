@@ -34,8 +34,16 @@ class TopicFacade
     Question.new(topic_id: topic.id)
   end
 
+  def new_link
+    Link.new(question_id: current_question.id)
+  end
+
   def topic_has_questions
     topic.has_questions
+  end
+
+  def topic_in_progress
+    true if topic.in_progress
   end
 
 private
