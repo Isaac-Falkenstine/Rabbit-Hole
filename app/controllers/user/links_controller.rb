@@ -14,6 +14,7 @@ protect_from_forgery except: :new
     question = Question.find(params[:question_id])
     topic = Topic.find(params[:topic_id])
     link = question.links.create(link_params)
+
     redirect_to user_topic_path(topic)
   end
 
@@ -24,7 +25,7 @@ protect_from_forgery except: :new
   private
 
   def link_params
-    params.require(:link).permit(:name, :url)
+    params.require(:link).permit(:name, :website_link_text)
   end
 
 

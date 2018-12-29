@@ -4,10 +4,10 @@
 </div>
 <div class="modal-body">
   <div id="new_link_form">
-  <%= simple_form_for @link, url: user_topic_question_links_path(@topic, @question) do |f| %>
-    <%=f.input_field :name %>
-    <%=f.input_field :url %>
-    <%= f.button :button, "Create link", class: "btn btn-primary"%>
-  <% end %>
-    </div>
+    <%= simple_form_for @link, url: user_topic_question_links_path(@topic, @question) do |f| %>
+      <%=f.input_field :name %> <br>
+      <%=f.input_field :website_link_text %>
+      <%= f.button :button, "Create link", class: "btn btn-primary"%>
+    <% end %>
+  </div>
 </div>

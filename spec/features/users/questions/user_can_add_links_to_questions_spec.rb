@@ -10,8 +10,8 @@ describe "a user visits a topic show page" do
 
       @question_1 = create(:question, topic: @topic, title: "Do I need a lawyer?")
 
-      @link_1 = create(:link, name: "Jim Rogers JD home site", url: "jimrogers.com", link_note: "Specializes in CO disability", question: @question_1)
-      @link_2 = create(:link, question: @question_1, name: "Advice on getting a lawyer", url: "advice.com/lawyers", link_note: "example note 2")
+      @link_1 = create(:link, name: "Jim Rogers JD home site", website_link_text: "jimrogers.com", link_note: "Specializes in CO disability", question: @question_1)
+      @link_2 = create(:link, question: @question_1, name: "Advice on getting a lawyer", website_link_text: "advice.com/lawyers", link_note: "example note 2")
 
       @question_2 = create(:question, topic: @topic, title: "Do I need a doctor note?", created_at: date)
       @question_3 = create(:question, topic: @topic, title: "Does it cost money?", created_at: date_2)
@@ -41,7 +41,8 @@ describe "a user visits a topic show page" do
       inputs = all('input[type="text"]')
 
       within("#new_link_form") do
-        inputs[0].set("example link")
+        inputs = all('input[type="text"]')
+        inputs[0].set("example name")
         inputs[1].set("example url")
       end
 
