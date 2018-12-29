@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   namespace :user do
     resources :topics,  only: [:new, :create, :show, :update] do
-      resources :questions, only: [:new, :create, :show]
+      resources :questions, only: [:new, :create, :show, :update]
     end
   end
 

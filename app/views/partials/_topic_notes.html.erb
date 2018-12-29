@@ -1,0 +1,12 @@
+<%= form_for [@facade.user, @facade.topic], url: user_topic_path(@facade.topic), method: :patch do |f|  %>
+
+  <p class="form_text">Topic notes: </p>
+  <% if !@facade.topic.topic_notes %>
+    <%= text_area_tag(:topic_notes, "Write topic notes here!", size: "120x6") %>
+  <% else %>
+    <%= text_area_tag(:topic_notes, "#{@facade.topic.topic_notes}", size: "120x6") %>
+  <% end %>
+  <div class="topic_note_save">
+    <br><%= f.submit "Save Note" %>
+  </div>
+<% end %>
