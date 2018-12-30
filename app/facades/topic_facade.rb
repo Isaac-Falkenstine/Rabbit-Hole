@@ -17,6 +17,10 @@ class TopicFacade
     end
   end
 
+  def current_question_links
+    current_question.links
+  end
+
   def bing_search(question, limit=5)
     raw_results = service.search_results(question)
     link_data = raw_results[:webPages][:value].map do |result|
@@ -32,8 +36,16 @@ class TopicFacade
     Question.new(topic_id: topic.id)
   end
 
+  def new_link
+    Link.new(question_id: current_question.id)
+  end
+
   def topic_has_questions
     topic.has_questions
+  end
+
+  def topic_in_progress
+    true if topic.in_progress
   end
 
 private

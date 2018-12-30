@@ -1,11 +1,30 @@
 <div class="container">
+
 <h2><%= @facade.current_question.title %></h2>
 
 <div class="bing_results">
-  <h3>Bing results: </h3>
+  <h3>Bing results</h3>
     <% @facade.bing_search(@facade.current_question).each do |link| %>
       <div class="search_results">
-        <%= link_to "#{link.title}", link.url %> <br>
+        <%= link_to "#{link.title}", link.saved_url %> <br>
       </div>
     <%end%>
+</div>
+
+<div class="all_saved_links">
+  <h3>Saved Links</h3>
+
+  <%= link_to 'Add new link', "/user/topics/#{@facade.topic.id}/questions/#{@facade.current_question.id}/links/new.js", remote: true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary' %>
+
+<div id="modal-window" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"></div>
+  </div>
+</div>
+
+  <% @facade.current_question_links.each do |link| %>
+    <div class="saved_link">
+      <%= link_to "#{link.name}", "http://#{link.website_link_text}" %> <br>
+    </div>
+  <%end%>
 </div>

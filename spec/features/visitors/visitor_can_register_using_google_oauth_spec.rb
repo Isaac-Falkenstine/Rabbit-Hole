@@ -26,7 +26,7 @@ describe 'As a visitor' do
     expect(page).to have_content("Account Created!")
   end
 
-  it 'I can register using Google Oauth' do
+  it 'cannot register using Google Oauth if oauth is invalid' do
     visit '/register'
 
     OmniAuth.config.test_mode = true
