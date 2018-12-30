@@ -11,10 +11,10 @@ class User::TopicsController < ApplicationController
     if params[:q_id]
       topic = Topic.find(params[:id])
       question = Question.find(params[:q_id])
-      @facade = TopicFacade.new(topic, question)
+      @facade = TopicFacade.new(topic, question, user)
     else
       topic = Topic.find(params[:id])
-      @facade = TopicFacade.new(topic)
+      @facade = TopicFacade.new(topic, user)
     end
   end
 
@@ -36,12 +36,13 @@ class User::TopicsController < ApplicationController
 
   private
 
+  attr_reader :user
+
   def topic_params
     params.require(:topic).permit(:title, :goal)
   end
 
   def update_params
-    params.require(:topic).permit(:status, :complete)
+    params.fetch(:topic, {}).permit(:status, :complete)
   end
-
 end

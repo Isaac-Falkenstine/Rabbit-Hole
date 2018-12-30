@@ -1,10 +1,12 @@
 class TopicFacade
   attr_reader :topic,
-              :main_question
+              :main_question,
+              :user
 
-  def initialize(topic, main_question=nil)
+  def initialize(topic, main_question=nil, user)
     @topic = topic
     @main_question = main_question
+    @user = user
   end
 
   def current_question
