@@ -7,8 +7,14 @@ $dropDown       : false;
 .navbar-default {
   background: $bgDefault;
   border-color: $bgHighlight;
+  min-height: 80px;
+  border-radius: 0px;
+  list-style: none;
   .navbar-header{
     .navbar-brand {
+      padding: 0 15px;
+      height: 80px;
+      line-height: 80px;
       font-size: 2em;
       font-family: 'Staatliches', cursive;
       color: $colDefault;
@@ -18,6 +24,11 @@ $dropDown       : false;
   .navbar-text {
     color: $colDefault; }
   .navbar-nav {
+    padding: 0 15px;
+    height: 80px;
+    line-height: 0;
+    padding-top: 15px;
+    font-size: 1.2em;
     > li {
       > a {
         color: $colDefault;
