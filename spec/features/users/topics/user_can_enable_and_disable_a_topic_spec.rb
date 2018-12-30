@@ -8,7 +8,7 @@ describe "User" do
     to_return(body: File.read("./spec/fixtures/bing_search_results.json"))
   end
 
-  scenario "Can disable a Topic" do
+  scenario "Can make an in progress topic Complete" do
     user = create(:user)
     topic_1 = create(:topic, user_id: user.id)
 
@@ -16,34 +16,27 @@ describe "User" do
 
     visit dashboard_path
 
-    expect(page).to have_content("Status: enable")
+    expect(page).to have_button("Research Complete")
 
     within(first(".topic_link")) do
-      # expect(page).to have_content("Disable")
-      click_on("Disable")
+      click_on("Research Complete")
     end
-
-     expect(page).to have_content("Status: disable")
-     expect(page).to have_button("Enable")
+    topic = Topic.find(topic_1.id)
+    expect(topic.complete).to be true
   end
 
-  scenario "Can enable a Topic" do
+  scenario "Can make a Complete topic in progress" do
     user = create(:user)
-    topic_1 = create(:topic, user_id: user.id, status: 'disable')
-    topic_2= create(:topic, user_id: user.id)
+    topic_1 = create(:topic, user_id: user.id, complete: true)
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     visit dashboard_path
-    
-    expect(page).to have_content("Status: disable")
 
     within(first(".topic_link")) do
-      # expect(page).to have_content("Disable")
-      click_on("Enable")
+      click_on("Reopen Research")
     end
-
-     expect(page).to have_content("Status: enable")
-     expect(page).to have_button("Disable")
+    topic = Topic.find(topic_1.id)
+    expect(topic.complete).to be false
   end
 end

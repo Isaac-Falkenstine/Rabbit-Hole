@@ -23,7 +23,7 @@ describe 'User' do
 
       expect(page).to have_content("Questions Asked:")
       expect(page).to have_content("Do I need a lawyer?")
-      expect(page).to have_content("Bing results:")
+      expect(page).to have_content("Bing results")
       expect(page).to have_css(".search_results", count: 5)
     end
   end

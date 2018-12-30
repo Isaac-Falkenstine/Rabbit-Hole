@@ -14,8 +14,8 @@ describe 'User' do
 
       expect(page).to have_content(topic_1.title)
       expect(page).to have_content(topic_2.title)
-      expect(page).to have_content("Research began on #{topic_1.created_at}")
-      expect(page).to have_content("Research updated on #{topic_2.updated_at}")
+      expect(page).to have_content("Research began on #{topic_1.created_at_format}")
+      expect(page).to have_content("Research updated on #{topic_2.updated_at_format}")
 
     end
 

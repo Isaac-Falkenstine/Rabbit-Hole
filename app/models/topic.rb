@@ -14,4 +14,16 @@ class Topic < ApplicationRecord
     true if questions.length > 0
   end
 
+  def created_at_format
+    self.created_at.strftime("%a, %d %B of %Y")
+  end
+
+  def updated_at_format
+    self.updated_at.strftime("%a, %d %B of %Y")
+  end
+
+  def in_progress
+    true if self.complete == false
+  end
+
 end

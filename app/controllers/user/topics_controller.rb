@@ -11,20 +11,16 @@ class User::TopicsController < ApplicationController
     if params[:q_id]
       topic = Topic.find(params[:id])
       question = Question.find(params[:q_id])
-      @facade = TopicFacade.new(topic, question)
+      @facade = TopicFacade.new(topic, question, user)
     else
       topic = Topic.find(params[:id])
-      @facade = TopicFacade.new(topic)
+      @facade = TopicFacade.new(topic, user)
     end
   end
 
   def update
     topic = Topic.find(params[:id])
-    if topic.enable?
-      topic.update(status: 0)
-    else
-      topic.update(status: 1)
-    end
+    topic.update(update_params)
     redirect_to dashboard_path
   end
 
@@ -41,8 +37,13 @@ class User::TopicsController < ApplicationController
 
   private
 
+  attr_reader :user
+
   def topic_params
     params.require(:topic).permit(:title, :goal)
   end
 
+  def update_params
+    params.fetch(:topic, {}).permit(:status, :complete)
+  end
 end
