@@ -7,14 +7,15 @@ $dropDown       : false;
 .navbar-default {
   background: $bgDefault;
   border-color: $bgHighlight;
-  min-height: 80px;
+  min-height: 70px;
   border-radius: 0px;
   list-style: none;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
   .navbar-header{
     .navbar-brand {
       padding: 0 15px;
-      height: 80px;
-      line-height: 80px;
+      height: 70px;
+      line-height: 70px;
       font-size: 2em;
       font-family: 'Staatliches', cursive;
       color: $colDefault;
@@ -22,16 +23,20 @@ $dropDown       : false;
         color: $colHighlight; }}
   }
   .navbar-text {
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
     color: $colDefault; }
   .navbar-nav {
-    padding: 0 15px;
-    height: 80px;
-    line-height: 0;
-    padding-top: 15px;
-    font-size: 1.2em;
+    font-size: 1em;
     > li {
       > a {
-        color: $colDefault;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+        margin: 15px;
+        padding: 10px;
+        background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+        border: 1px solid transparent;
+        border-radius: 4px;
+        color: white;
         &:hover,  &:focus {
-          color: $colHighlight; }}}}
+          color: white;
+          border-color: black; }}}}
 }

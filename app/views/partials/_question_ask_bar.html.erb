@@ -1,0 +1,4 @@
+<%= form_for @facade.new_question, url: user_topic_questions_path(@facade.topic) do |f| %>
+  <%= f.text_field :title, size: 100 %>
+  <%= f.submit "Ask New Question", class: 'btn btn-primary' %>
+<% end %>

@@ -24,7 +24,7 @@ describe 'User' do
       within(".topic_note_save") do
         click_on "Save Note"
       end
-      
+
       visit dashboard_path
       visit user_topic_path(topic_1)
 
