@@ -5,8 +5,8 @@
 <div class="modal-body">
   <div id="new_link_form">
     <%= simple_form_for @link, url: user_topic_question_links_path(@topic, @question) do |f| %>
-      <%=f.input_field :name %> <br>
-      <%=f.input_field :website_link_text %>
+      <%=f.input :name, label: 'Include a brief description', placeholder: 'ABA recent graduate data', input_html: { maxlength: 75, :size => 40 } %>
+      <%=f.input :website_link_text, label: 'Add the full website URL', placeholder: 'www.americanbar.org/groups/legal_education/resources/statistics/', input_html: { maxlength: 255, :size => 40 } %>
       <%= f.button :button, "Create link", class: "btn btn-primary"%>
     <% end %>
   </div>

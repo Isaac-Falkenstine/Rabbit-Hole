@@ -20,8 +20,7 @@ describe"User" do
 
     expect(current_path).to eq(user_topic_path(topic_1))
 
-    expect(page).to have_content("If your journey is complete and your goal achieved")
-    click_on("Complete Topic")
+    click_on("Research Complete")
 
     expect(current_path).to eq(dashboard_path)
 

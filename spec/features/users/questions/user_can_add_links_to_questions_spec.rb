@@ -49,6 +49,11 @@ describe "a user visits a topic show page" do
       click_on "Create link"
 
       topic_1 = Topic.find(@topic.id)
+      visit user_topic_path(topic_1)
+
+      within(".all_saved_links") do
+        expect(page).to have_content "example name"
+      end
 
       expect(@question_1.links.count).to eq 3
     end
