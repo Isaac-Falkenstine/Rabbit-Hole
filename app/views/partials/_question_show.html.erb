@@ -13,7 +13,7 @@
     <h3>Bing results</h3>
       <% @facade.bing_search(@facade.current_question).each do |link| %>
         <div class="search_results">
-          <%= link_to "#{link.title}", link.saved_url %> <br>
+          <%= link_to "#{link.title}", link.saved_url %> <%= link_to 'Save Link', "#{new_user_topic_question_link_url(@facade.topic, @facade.current_question)}.js", remote: true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary'%>
         </div>
       <%end%>
   </div>

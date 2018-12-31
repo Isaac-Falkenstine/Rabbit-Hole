@@ -25,8 +25,7 @@ protect_from_forgery except: :new
   private
 
   def link_params
-    params.require(:link).permit(:name, :website_link_text)
+    params.require(:link).permit(:link, :name, :website_link_text)
   end
-
 
 end
