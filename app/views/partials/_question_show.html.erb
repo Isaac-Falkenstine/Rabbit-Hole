@@ -6,19 +6,7 @@
 </div>
 
 <div class="card">
-  <h3>Notes</h3>
-  <%= form_for [@facade.user, @facade.current_question], url: user_topic_question_path(@facade.topic), method: :patch do |f|  %>
-    <div class="question_note_area">
-      <% if !@facade.current_question.notes_text %>
-        <%= text_area_tag(:notes_text, "Write notes here!", size: "120x6") %>
-      <% else %>
-        <%= text_area_tag(:notes_text, "#{@facade.current_question.notes_text}", size: "120x6") %>
-      <% end %>
-    </div>
-    <div class="question_note_save">
-      <%= f.submit "Save Note", class: 'btn btn-secondary' %>
-    </div>
-  <% end %>
+  <%= render 'partials/question_notes' %>
 </div>
 
 <div class="card">

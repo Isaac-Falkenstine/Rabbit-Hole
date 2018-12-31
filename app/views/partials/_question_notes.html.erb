@@ -1,6 +1,6 @@
-<div class="container">
+
 <h3>Notes</h3>
-<%= form_for [@facade.user, @facade.current_question], url: user_topic_question_path(@facade.topic), method: :patch do |f|  %>
+<%= simple_form_for @facade.current_question, url: user_topic_question_path(@facade.topic, @facade.current_question) do |f| %>
   <div class="question_note_area">
     <% if !@facade.current_question.notes_text %>
       <%= text_area_tag(:notes_text, "Write notes here!", size: "120x6") %>
@@ -12,4 +12,3 @@
     <%= f.submit "Save Note", class: 'btn btn-secondary' %>
   </div>
 <% end %>
-</div>
