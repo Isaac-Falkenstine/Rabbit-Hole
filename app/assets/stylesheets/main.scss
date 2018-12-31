@@ -1,4 +1,32 @@
 body {
+  .btn-primary {
+    background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
+    border: 1px solid rgba(0,0,0,.125);
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+    &:hover {
+      color: white;
+      border-color: black;
+    }
+    }
+  .btn-secondary {
+      background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+      border: 1px solid rgba(0,0,0,.125);
+      color: white;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+      &:hover {
+        color: white;
+        border-color: black;
+      }
+      }
+  .card {
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  }
   h1 {
     font-family: 'Staatliches', cursive;
   }
@@ -6,12 +34,12 @@ body {
     font-family: 'Staatliches', cursive;
   }
   padding:0;
-  margin: 0;
   text-align: center;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fafafa;
+  background-color: #F4F7FA;
+
 }

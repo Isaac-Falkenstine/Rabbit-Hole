@@ -5,36 +5,25 @@
   <%=@facade.topic.goal%>
 
   <% if @facade.topic_in_progress %>
-    <%= button_to "Research Complete", user_topic_path(@facade.topic), :params => {:topic => { complete: true }}, method: :put %>
+    <%= button_to "Research Complete", user_topic_path(@facade.topic), :params => {:topic => { complete: true }}, method: :put, class: 'btn btn-secondary' %>
   <% else %>
-    <%= button_to "Reopen Research", user_topic_path(@facade.topic), :params => {:topic => { complete: false }}, method: :put %>
+    <%= button_to "Reopen Research", user_topic_path(@facade.topic), :params => {:topic => { complete: false }}, method: :put, class: 'btn btn-secondary' %>
   <%end %>
 
   <%= render 'partials/topic_notes' %>
 
-</div>
-
-<div class="new_question">
-  <%= form_for @facade.new_question, url: user_topic_questions_path(@facade.topic) do |f| %>
-    <%= f.text_field :title, size: 100 %>
-    <%= f.submit "Ask" %>
-  <% end %>
-</div>
-
-<div class="question_show">
   <% if @facade.topic_has_questions %>
-  <%= render 'partials/question_show' %>
-
-  <%= render 'partials/question_notes' %>
-
+    <%= render 'partials/question_ask_bar' %>
+    <%= render 'partials/question_show' %>
   <%else%>
     <p>Ask a question to get started.</p>
+    <%= render 'partials/question_ask_bar' %>
   <%end%>
-</div>
 
-<div class="all_questions">
+
   <h2>Questions Asked:</h2>
   <% @facade.topic_questions.each do |question|%>
     <%= link_to "#{question.title}", user_topic_question_path(@facade.topic.id, question_id: question.id) %> <br>
   <% end %>
+
 </div>
