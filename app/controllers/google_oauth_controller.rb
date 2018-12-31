@@ -18,8 +18,6 @@ class GoogleOauthController < ApplicationController
         session[:user_id] = user.id
         flash[:notice] = "Account Created!"
         redirect_to dashboard_path
-      else
-        flash[:notice] = "Google Authorization was unable to be completed."
       end
     end
   end
