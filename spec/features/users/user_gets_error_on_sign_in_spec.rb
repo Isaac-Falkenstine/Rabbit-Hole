@@ -15,6 +15,8 @@ RSpec.describe 'User' do
       click_on 'Sign in'
   end
 
+  expect(current_path).to eq(login_path)
+
     expect(page).to have_content("Looks like your email or password is invalid")
   end
 end
