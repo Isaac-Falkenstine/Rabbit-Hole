@@ -36,7 +36,6 @@ describe "a user visits a topic show page" do
       click_on @question_1.title
 
       click_on "Add New Link"
-      expect(page).to have_content("Add a link to the current question")
 
       inputs = all('input[type="text"]')
 
