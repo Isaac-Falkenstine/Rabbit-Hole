@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
 <%= form_for [@facade.user, @facade.topic], url: user_topic_path(@facade.topic), method: :patch do |f|  %>
   <div class="topic_note_area">
     <% if !@facade.topic.topic_notes %>

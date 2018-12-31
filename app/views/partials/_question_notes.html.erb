@@ -1,4 +1,4 @@
-
+<div class="container-fluid">
 <h3>Notes</h3>
 <%= simple_form_for @facade.current_question, url: user_topic_question_path(@facade.topic, @facade.current_question) do |f| %>
   <div class="question_note_area">
@@ -12,3 +12,4 @@
     <%= f.submit "Save Note", class: 'btn btn-secondary' %>
   </div>
 <% end %>
+</div>
