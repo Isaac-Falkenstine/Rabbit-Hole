@@ -1,5 +1,12 @@
 language: ruby
 rvm:
-  - 2.4.1
+- 2.4.1
+bundler_args: --jobs=2
 script:
-  bundle exec rake db:{create,migrate}
+  - bundle exec rake db:setup
+  - bundle exec rake spec
+cache: bundler
+services:
+  - postgresql
+addons:
+  postgresql: "10.0"
