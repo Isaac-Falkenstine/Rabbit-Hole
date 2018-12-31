@@ -1,9 +1,11 @@
 <nav class="sidebar-nav navbar-fixed">
   <div class="container-fluid">
       <h2>Questions Asked:</h2>
+      <ul>
       <% @facade.topic_questions.each do |question|%>
-      <p><%= link_to "#{question.title}", user_topic_question_path(@facade.topic.id, question_id: question.id) %></p>
+      <li><%= link_to "#{question.title}", user_topic_question_path(@facade.topic.id, question_id: question.id) %></li><br>
       <% end %>
+      </ul>
   </div>
 </nav>
 

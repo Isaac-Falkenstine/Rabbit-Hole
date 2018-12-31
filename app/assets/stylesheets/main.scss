@@ -1,4 +1,17 @@
 body {
+  h1 {
+    font-family: 'Staatliches', cursive;
+  }
+  h2 {
+    font-family: 'Staatliches', cursive;
+  }
+  text-align: center;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #F4F7FA;
   width: 100%;
   .btn-primary {
     background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
@@ -9,17 +22,17 @@ body {
       color: white;
       border-color: black;
     }
-    }
+  }
   .btn-secondary {
-      background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
-      border: 1px solid rgba(0,0,0,.125);
+    background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+    border: 1px solid rgba(0,0,0,.125);
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+    &:hover {
       color: white;
-      text-shadow: 0 -1px 0 rgba(0,0,0,.2);
-      &:hover {
-        color: white;
-        border-color: black;
-      }
-      }
+      border-color: black;
+    }
+  }
   .card {
     h3{
       margin: 5px;
@@ -34,27 +47,18 @@ body {
     padding-bottom: 10px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   }
-  h1 {
-    font-family: 'Staatliches', cursive;
-  }
-  h2 {
-    font-family: 'Staatliches', cursive;
-  }
-  text-align: center;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #F4F7FA;
   .sidebar-nav{
     position: fixed;
     min-width: 100px;
-    padding: 0;
-    list-style: none;
+    padding-left: 0;
     text-shadow: 0 -1px 0 rgba(0,0,0,.2);
-
-  }
+    ul {    list-style: none;
+    li > a {
+    text-align: left;
+    display: block;
+    border-radius: 0;
+    position: relative;}
+  }}
   .topic {
     align-items: center;
     margin-left: 150px;
@@ -68,12 +72,13 @@ body {
         margin: 10px;
         align-items: center;
         grid-template-columns: 50% 50%;
-      h1 {
-        margin-top: 0;
-      }
-      .headline {
-        border-bottom: 1px solid;
+        h1 {
+          margin-top: 0;
+        }
+        .headline {
+          border-bottom: 1px solid;
+        }
       }
     }
-  }}
+  }
 }
