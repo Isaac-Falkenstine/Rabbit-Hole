@@ -6,12 +6,12 @@ class User::QuestionsController < ApplicationController
   def create
     topic = Topic.find(params[:topic_id])
     question = topic.questions.create(question_params)
-    redirect_to user_topic_path(topic)
+    redirect_to user_topic_path(topic, q_id: params[:question_id])
   end
 
   def show
-    @topic = Topic.find(params[:topic_id])
-    redirect_to user_topic_path(@topic, q_id: params[:question_id])
+    topic = Topic.find(params[:topic_id])
+    redirect_to user_topic_path(topic, q_id: params[:question_id])
   end
 
   def update

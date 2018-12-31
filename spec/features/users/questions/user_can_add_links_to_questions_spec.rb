@@ -46,7 +46,7 @@ describe "a user visits a topic show page" do
         inputs[1].set("example url")
       end
 
-      click_on "Create link"
+      click_on "Create Link"
 
       topic_1 = Topic.find(@topic.id)
       visit user_topic_path(topic_1)
