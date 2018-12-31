@@ -14,7 +14,7 @@
     <h3>Bing results</h3>
       <% @facade.bing_search(@facade.current_question).each do |link| %>
         <div class="search_results">
-          <%= link_to "#{link.title}", link.saved_url %> <br>
+          <%= link_to "#{link.title}", link.saved_url, target: "_blank" %> <br>
         </div>
       <%end%>
   </div>
