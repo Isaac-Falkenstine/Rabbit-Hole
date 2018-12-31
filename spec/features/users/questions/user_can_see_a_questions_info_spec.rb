@@ -23,7 +23,7 @@ require "rails_helper"
       visit user_topic_path(@topic)
 
       click_on @question_2.title
-      within(".question_show") do
+      within(".question_title") do
         expect(page).to have_content @question_2.title
       end
     end

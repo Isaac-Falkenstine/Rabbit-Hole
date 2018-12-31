@@ -20,8 +20,13 @@ class User::TopicsController < ApplicationController
 
   def update
     topic = Topic.find(params[:id])
+    if params[:topic_notes] != nil
+      topic.update(topic_notes: params[:topic_notes])
+      redirect_to user_topic_path(topic)
+    else
     topic.update(update_params)
     redirect_to dashboard_path
+    end
   end
 
   def create
@@ -44,6 +49,6 @@ class User::TopicsController < ApplicationController
   end
 
   def update_params
-    params.fetch(:topic, {}).permit(:status, :complete)
+    params.fetch(:topic, {}).permit(:status, :complete, :topic_notes)
   end
 end

@@ -19,6 +19,7 @@ class User::QuestionsController < ApplicationController
     topic = Topic.find(params[:topic_id])
     question = Question.find(params[:id])
     question.update(notes_text: params[:notes_text])
+
     redirect_to user_topic_path(topic)
   end
 

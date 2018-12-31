@@ -1,5 +1,5 @@
-<div id="login-page">
-  <div class="container">
+
+  <div class="card">
     <div class="form-login">
       <h2 class="form-login-heading">register now</h2>
       <div class="login-wrap">
@@ -30,16 +30,15 @@
           </div>
           <br>
           <div class="login_submit">
-            <%= form.submit 'Register', class: "btn btn-theme btn-block" %>
+            <%= form.submit 'Register', class: 'btn btn-primary' %>
           </div>
         <% end %>
       </end>
         <hr>
         <div class="login-social-link centered">
           <p>Register using your Google account</p>
-            <%= link_to "Register with Google", "/auth/google_oauth2", class: "btn btn-primary" %>
+            <%= link_to "Register with Google", "/auth/google_oauth2", class: 'btn btn-primary' %>
         </div>
       </div>
     </form>
   </div>
-</div>

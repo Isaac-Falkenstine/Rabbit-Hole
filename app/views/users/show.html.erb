@@ -1,7 +1,7 @@
 <h1> <%= @facade.full_name%>'s Topic Dashboard</h1>
 
 <div class="New_topic">
-  <%= link_to "Create New Topic", new_user_topic_path %>
+  <%= link_to "Create New Topic", new_user_topic_path, class: 'btn btn-primary' %>
 </div>
 
 <div class="content">
@@ -26,7 +26,7 @@
                     Research began on <%=topic.created_at_format %>
                   </td>
                   <td>
-                    <%= button_to "Research Complete", user_topic_path(topic), :params => {:topic => { complete: true }}, method: :put %>
+                    <%= button_to "Research Complete", user_topic_path(topic), :params => {:topic => { complete: true }}, method: :put, class: 'btn btn-secondary' %>
                   </td>
                 </tr>
                 <%end%>
@@ -38,7 +38,7 @@
     </div>
   </div>
 </div>
-</div>
+
 
 <div class="content">
   <div class="container-fluid">
@@ -62,7 +62,7 @@
                     Research updated on <%=topic.updated_at_format %>
                   </td>
                   <td>
-                    <%= button_to "Reopen Research", user_topic_path(topic), :params => {:topic => { complete: false }}, method: :put %>
+                    <%= button_to "Reopen Research", user_topic_path(topic), :params => {:topic => { complete: false }}, method: :put, class: 'btn btn-secondary' %>
                   </td>
                 </tr>
                 <%end%>
@@ -73,5 +73,4 @@
       </div>
     </div>
   </div>
-</div>
 </div>
