@@ -18,30 +18,29 @@ At this point, you should be able to run the local test suite using `bundle exec
 ### gems:
 
 - rails
--ruby '2.4.1'
--'rails', '~> 5.2.2'
--'pg', '>= 0.18', '< 2.0'
--'puma', '~> 3.11'
--'sass-rails', '~> 5.0'
--'uglifier', '>= 1.3.0'
--'mini_racer', platforms:
--'coffee-rails', '~> 4.2'
--'jbuilder', '~> 2.5'
+-ruby 
+-'rails'
+-'pg'
+-'puma'
+-'sass-rails'
+-'uglifier' 
+-'mini_racer'
+-'coffee-rails'
+-'jbuilder'
 -'figaro'
 -'sendgrid-ruby'
 -'google-api-client', req
 -'omniauth-google-oauth2'
--'redis', '~> 4.0'
--'bcrypt', '~> 3.1.7'
--'mini_magick', '~> 4.8'
--'webpacker', '~> 3.5'
--'bootsnap', '>= 1.1.0', 
+-'redis'
+-'bcrypt'
+-'mini_magick'
+-'webpacker'
+-'bootsnap'
 -'jquery-rails'
-- 'popper_js', '~> 1.14.5'
--'webdrivers", "~> 3.0'
+- 'popper_js'
+-'webdrivers"
 -'simple_form'
--group :de
--'byebug', platforms: [:m
+-'byebug'
 -'rspec-rails'
 -'launchy'
 -'webmock'
@@ -53,9 +52,9 @@ At this point, you should be able to run the local test suite using `bundle exec
 -'factory_bot_rails'
 -'pry'
 -'selenium-webdriver'
--'web-console', '>= 3.3.0
--'listen', '>= 3.0.5', '<
--'tzinfo-data', platf
+-'web-console'
+-'listen'
+-'tzinfo-data'
 
 ### Schema:
 
