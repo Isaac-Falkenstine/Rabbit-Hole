@@ -28,4 +28,24 @@ describe "User can create a new topic" do
     expect(current_path).to eq(user_topic_path(topic))
     expect(page).to have_content(topic.title)
   end
+
+    scenario "User gets flash when topic creation fails" do
+
+    user = create(:user)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+    visit dashboard_path
+
+    click_on "Create New Topic"
+
+    expect(current_path).to eq(new_user_topic_path)
+
+
+    fill_in "topic[goal]", with: "jskf"
+
+    click_on "Create New Topic"
+
+
+    expect(page).to have_content("Topic couldn't be saved, fill all the forms")
+  end
 end
