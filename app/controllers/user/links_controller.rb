@@ -14,7 +14,7 @@ protect_from_forgery except: :new
     question = Question.find(params[:question_id])
     topic = Topic.find(params[:topic_id])
     link = question.links.create(link_params)
-
+    
     redirect_to user_topic_path(topic)
   end
 
