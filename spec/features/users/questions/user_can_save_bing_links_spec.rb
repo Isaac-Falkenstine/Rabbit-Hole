@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe "a user visits a topic show page" do
-  context "A specific question and its details are rendered on the topic show page" do
+  context "A specific question and its details are rendered on the topic show page", js: true do
     before(:each) do
       date = Date.today - 1.days
       date_2 = Date.today - 2.days
@@ -17,44 +17,35 @@ describe "a user visits a topic show page" do
       @question_3 = create(:question, topic: @topic, title: "Does it cost money?", created_at: date_2)
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+
+      stub_request(:get, "https://api.cognitive.microsoft.com").
+            to_return(body: File.read("./spec/fixtures/bing_search_results.json"))
+
+      visit user_topic_path(@topic)
+      click_on @question_2.title
+
+      @bing_website = "https://www.disabilitybenefitshome.com/disability-benefits-blog/2012/06/do-i-need-a-doctors-note-to-qualify-for-ssa-disability/"
     end
 
-    it "sees a section for my links showing links I've created" do
-      visit user_topic_path(@topic)
-      click_on @question_1.title
-
-      expect(page).to have_content "Saved Links"
-
-      within(".all_saved_links") do
-        expect(page).to have_content @link_1.name
-        expect(page).to have_content @link_2.name
+    it "can save a bing link to saved links", js: true do
+      within(first(".search_results")) do
+        click_on "Save Link"
       end
-    end
-
-    it "allows me to add a new link", js: true do
-      visit user_topic_path(@topic)
-      click_on @question_1.title
-
-      click_on "Add New Link"
-
-      inputs = all('input[type="text"]')
+      expect(page).to have_css(".modal-title")
 
       within("#new_link_form") do
         inputs = all('input[type="text"]')
-        inputs[0].set("example name")
-        inputs[1].set("example url")
+        inputs[0].set("Newly added link from bing")
       end
 
       click_on "Create Link"
 
-      topic_1 = Topic.find(@topic.id)
-      visit user_topic_path(topic_1)
-
       within(".all_saved_links") do
-        expect(page).to have_content "example name"
+        expect(page).to have_content "Newly added link from bing"
       end
 
-      expect(@question_1.links.count).to eq 3
+      expect(Link.last.website_link_text).to eq @bing_website
+
     end
   end
 end

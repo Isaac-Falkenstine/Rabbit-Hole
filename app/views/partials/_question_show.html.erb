@@ -1,12 +1,11 @@
-
-
-<div class="container">
-<div class=question_title>
+<div class="container_fluid">
+<div class="question_title">
 <h2><%= @facade.current_question.title %></h2>
 </div>
 
+
 <div class="card">
-  <%= render 'partials/question_notes' %>
+    <%= render 'partials/question_notes' %>
 </div>
 
 <div class="card">
@@ -14,11 +13,11 @@
     <h3>Bing results</h3>
       <% @facade.bing_search(@facade.current_question).each do |link| %>
         <div class="search_results">
-          <%= link_to "#{link.title}", link.saved_url, target: "_blank" %> <br>
+          <%= link_to "#{link.title}", link.bing_site_link_text %> <%= link_to 'Save Link', "#{new_user_topic_question_link_url(@facade.topic, @facade.current_question)}.js?bing_website_text=#{link.bing_site_link_text}", remote: true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary'%>
         </div>
       <%end%>
   </div>
-</end>
+</div>
 
 <div class="card">
   <div class="all_saved_links">
