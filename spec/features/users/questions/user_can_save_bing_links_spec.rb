@@ -31,7 +31,6 @@ describe "a user visits a topic show page" do
       within(first(".search_results")) do
         click_on "Save Link"
       end
-      expect(page).to have_css(".modal-title")
 
       within("#new_link_form") do
         inputs = all('input[type="text"]')
