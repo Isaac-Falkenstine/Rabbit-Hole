@@ -13,7 +13,8 @@
     <h3>Bing results</h3>
       <% @facade.bing_search(@facade.current_question).each do |link| %>
         <div class="search_results">
-          <%= link_to "#{link.title}", link.bing_site_link_text %> <%= link_to 'Save Link', "#{new_user_topic_question_link_url(@facade.topic, @facade.current_question)}.js?bing_website_text=#{link.bing_site_link_text}", remote: true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary'%>
+          <%= link_to "#{link.title}", link.bing_site_link_text, target: "_blank" %> <%= link_to 'Save Link', "#{new_user_topic_question_link_url(@facade.topic, @facade.current_question)}.js?bing_website_text=#{link.bing_site_link_text}", remote: true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary'%><br>
+          <%=link.bing_display_text%>
         </div>
       <%end%>
   </div>
@@ -33,7 +34,8 @@
 
     <% @facade.current_question_links.each do |link| %>
       <div class="saved_link">
-        <%= link_to "#{link.name}", "http://#{link.website_link_text}" %> <br>
+        <%= link_to "#{link.name}", "http://#{link.website_link_text}", target: "_blank" %> <br>
+        <%= link.website_link_text.truncate(65) %>
       </div>
     <%end%>
   </div>
