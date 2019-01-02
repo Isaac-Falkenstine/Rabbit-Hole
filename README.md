@@ -42,6 +42,10 @@ At this point, you should be able to run the local test suite using `bundle exec
 - gem 'pry'
 - gem 'selenium-webdriver'
 
+### Schema:
+
+![Schema](./schema2.png)
+
 ### Requirements, Access, Security:
 
 You will need a Bing v7 Search Key, and a Google Oauth Client Key and Secret. Set these keys as environment variables in the application.yml file that is generated when Figaro is installed (type `figaro install` into your terminal at the root of the application).
