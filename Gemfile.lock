@@ -296,7 +296,6 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-
     webdrivers (3.5.2)
       net_http_ssl_fix
       nokogiri (~> 1.6)
