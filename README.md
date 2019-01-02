@@ -18,29 +18,29 @@ At this point, you should be able to run the local test suite using `bundle exec
 ### Gems:
 
 #### Main
--'figaro'
-- 'faraday'
--'sendgrid-ruby'
--'google-api-client', req
--'omniauth-google-oauth2'
--'bcrypt'
--'webpacker'
--'jquery-rails'
-- 'popper_js'
--'simple_form'
+gem 'figaro'
+gem 'faraday'
+gem 'sendgrid-ruby'
+gem 'google-api-client', req
+gem 'omniauth-google-oauth2'
+gem 'bcrypt'
+gem 'webpacker'
+gem'jquery-rails'
+gem 'popper_js'
+gem 'simple_form'
 
 #### Testing
--'rspec-rails'
--'launchy'
--'webmock'
--'vcr'
--'capybara'
--'shoulda-matchers'  
--'simplecov'
--'database_cleaner'
--'factory_bot_rails'
--'pry'
--'selenium-webdriver'
+gem 'rspec-rails'
+gem 'launchy'
+gem 'webmock'
+gem 'vcr'
+gem 'capybara'
+gem 'shoulda-matchers'  
+gem 'simplecov'
+gem 'database_cleaner'
+gem 'factory_bot_rails'
+gem 'pry'
+gem 'selenium-webdriver'
 
 ### Requirements, Access, Security:
 
