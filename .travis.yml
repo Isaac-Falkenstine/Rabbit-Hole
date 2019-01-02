@@ -18,4 +18,6 @@ rbenv:
 services:
 - postgresql
 before_script:
-- bundle exec rake db:{drop,create,migrate,seed}
+- bundle exec rake db:setup
+- bundle exec rake spec
+ bundler_args: --jobs=2
