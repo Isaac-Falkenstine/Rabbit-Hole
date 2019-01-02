@@ -1,7 +1,7 @@
 # README
 ## Rabbit-Hole
 
-RabbitHole is a customized web application that helps users learn new things more efficiently through the infinite resources on the internet by providing organizational structure around the online research process through an interactive GUI.
+RabbitHole is a customized web application designed to help users learn new content more efficiently through consumption of online resources. RabbitHole provides an organizational structure around the online research process through an interactive GUI where users document research topics, specific questions, notes, and resource links. RabbitHole utilizes the Bing v7 Search API to continually generate resources directly related to a user's topic and question. Google OAuth is used for user registration and login.
 
 ### Setup:
 
@@ -15,32 +15,21 @@ Next, run `bundle exec rake db:{drop,create,migrate}` to create the database and
 
 At this point, you should be able to run the local test suite using `bundle exec rspec`.
 
-### gems:
+### Gems:
 
-- rails
--ruby 
--'rails'
--'pg'
--'puma'
--'sass-rails'
--'uglifier' 
--'mini_racer'
--'coffee-rails'
--'jbuilder'
+#### Main
 -'figaro'
+- 'faraday'
 -'sendgrid-ruby'
 -'google-api-client', req
 -'omniauth-google-oauth2'
--'redis'
 -'bcrypt'
--'mini_magick'
 -'webpacker'
--'bootsnap'
 -'jquery-rails'
 - 'popper_js'
--'webdrivers"
 -'simple_form'
--'byebug'
+
+#### Testing
 -'rspec-rails'
 -'launchy'
 -'webmock'
@@ -52,24 +41,24 @@ At this point, you should be able to run the local test suite using `bundle exec
 -'factory_bot_rails'
 -'pry'
 -'selenium-webdriver'
--'web-console'
--'listen'
--'tzinfo-data'
-
-### Schema:
-
-![Schema](./schema.png)
 
 ### Requirements, Access, Security:
 
-You will need a Bing v7 Search Key, and a google oauth key that you put in your application.yml file that is generated when you type 'figaro install' into your terminal. 
+You will need a Bing v7 Search Key, and a Google Oauth Client Key and Secret. Set these keys as environment variables in the application.yml file that is generated when Figaro is installed (type `figaro install` into your terminal at the root of the application).
 
+
+### Near Term Functionality:
+- Editing profile information.
+- Editing/deleting topics, links, questions.
+- Scroll bar for Bing Links and ability to set how many links a user wants displayed.
+- Admin functionality.
 
 ### Future Iterations:
 
-- Future iterations would involve creating a mobile version of this app.
+- Incorporating Google Calendar to schedule to-do's.
+- Rendering web page content within the app.
+- Creating a mobile version.
 
--	
 
 ### Contributing:
 
