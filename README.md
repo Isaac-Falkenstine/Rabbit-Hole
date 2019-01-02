@@ -1,24 +1,79 @@
 # README
+## Rabbit-Hole
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+RabbitHole is a customized web application that helps users learn new things more efficiently through the infinite resources on the internet by providing organizational structure around the online research process through an interactive GUI.
 
-Things you may want to cover:
+### Setup:
 
-* Ruby version
+To begin, clone this repo:
 
-* System dependencies
+```
+git@github.com:Isaac-Falkenstine/Rabbit-Hole.git
+```
+After you `cd` into the project directory, run `bundle install` from the command line.
+Next, run `bundle exec rake db:{drop,create,migrate}` to create the database and schema.
 
-* Configuration
+At this point, you should be able to run the local test suite using `bundle exec rspec`.
 
-* Database creation
+### gems:
 
-* Database initialization
+- rails
+-ruby 
+-'rails'
+-'pg'
+-'puma'
+-'sass-rails'
+-'uglifier' 
+-'mini_racer'
+-'coffee-rails'
+-'jbuilder'
+-'figaro'
+-'sendgrid-ruby'
+-'google-api-client', req
+-'omniauth-google-oauth2'
+-'redis'
+-'bcrypt'
+-'mini_magick'
+-'webpacker'
+-'bootsnap'
+-'jquery-rails'
+- 'popper_js'
+-'webdrivers"
+-'simple_form'
+-'byebug'
+-'rspec-rails'
+-'launchy'
+-'webmock'
+-'vcr'
+-'capybara'
+-'shoulda-matchers'  
+-'simplecov'
+-'database_cleaner'
+-'factory_bot_rails'
+-'pry'
+-'selenium-webdriver'
+-'web-console'
+-'listen'
+-'tzinfo-data'
 
-* How to run the test suite
+### Schema:
 
-* Services (job queues, cache servers, search engines, etc.)
+![Schema](./schema.png)
 
-* Deployment instructions
+### Requirements, Access, Security:
 
-* ...
+You will need a Bing v7 Search Key, and a google oauth key that you put in your application.yml file that is generated when you type 'figaro install' into your terminal. 
+
+
+### Future Iterations:
+
+- Future iterations would involve creating a mobile version of this app.
+
+-	
+
+### Contributing:
+
+In order to contribute, please fork this repo, then clone your new repo and create a branch for your feature.
+
+Please make sure to test your feature fully, using RSpec, before commiting your changes and pushing to your own repo, then create and submit a pull request back to this repository.
+
