@@ -58,7 +58,7 @@ At this point, you should be able to run the local test suite using `bundle exec
 
 ### Schema:
 
-![Schema Diagram](./schema.png)
+![Schema](./schema.png)
 
 ### Requirements, Access, Security:
 
