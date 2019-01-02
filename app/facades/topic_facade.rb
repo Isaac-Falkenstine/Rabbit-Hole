@@ -48,6 +48,10 @@ class TopicFacade
     true if topic.in_progress
   end
 
+  def topic_question_count
+    topic.questions.count
+  end
+
 private
 
   def service

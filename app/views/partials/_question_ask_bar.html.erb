@@ -1,3 +1,9 @@
+<% if @facade.topic_question_count == 0 %>
+  <h3> Now ask a question that you have to get started with your research! </h3>
+  <div align="right">
+  <h1> ↓↓↓ </h1>
+  </div>
+<% end %>
 <%= form_for @facade.new_question, url: user_topic_questions_path(@facade.topic) do |f| %>
   <%= f.text_field :title, size: 100 %>
   <%= f.submit "Ask New Question", class: 'btn btn-primary' %>
