@@ -1,7 +1,7 @@
 # README
 ## Rabbit-Hole
 
-RabbitHole is a rails-app 
+RabbitHole is a customized web application that helps users learn new things more efficiently through the infinite resources on the internet by providing organizational structure around the online research process through an interactive GUI.
 
 ### Setup:
 
@@ -58,16 +58,16 @@ At this point, you should be able to run the local test suite using `bundle exec
 
 ### Schema:
 
-
+![Schema Diagram](./schema.png)
 
 ### Requirements, Access, Security:
 
-
+You will need a Bing v7 Search Key, and a google oauth key that you put in your application.yml file that is generated when you type 'figaro install' into your terminal. 
 
 
 ### Future Iterations:
 
-- 
+- Future iterations would involve creating a mobile version of this app.
 
 -	
 
@@ -76,3 +76,4 @@ At this point, you should be able to run the local test suite using `bundle exec
 In order to contribute, please fork this repo, then clone your new repo and create a branch for your feature.
 
 Please make sure to test your feature fully, using RSpec, before commiting your changes and pushing to your own repo, then create and submit a pull request back to this repository.
+
