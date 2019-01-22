@@ -17,4 +17,8 @@ class UserDashboardFacade
   def in_progress_topics
     user.topics.where(complete: false)
   end
+
+  def user_topics_count
+    user.topics.count
+  end
 end

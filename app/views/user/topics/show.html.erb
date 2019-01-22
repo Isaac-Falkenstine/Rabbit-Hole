@@ -1,66 +1,54 @@
-<div class="all_topic_show_content">
-
-<nav class="sidebar-nav">
-  <div class=side_bar_content>
+<nav class="sidebar-nav navbar-fixed">
+  <div class="container-fluid">
       <h2>Questions Asked:</h2>
       <ul>
       <% @facade.topic_questions.each do |question|%>
       <li><%= link_to "#{question.title}", user_topic_question_path(@facade.topic.id, question_id: question.id) %></li><br>
       <% end %>
       </ul>
-    </div>
+  </div>
 </nav>
 
-  <div class="topic_show_content">
-    <div class="container">
-      <div class="topic">
-        <div class="topic_body">
 
-          <div class="card">
+<div class="container">
 
-            <div class="topic_header">
-              <div class="learning_about">
-                <p class="headline">Learning about</p>
-                <h1><%=@facade.topic.title%></h1>
-              </div>
-              <div class="goal">
-                <p class="headline">Goal</p>
-                <h1><%=@facade.topic.goal%></h1>
-              </div>
-            </div>
+<div class="topic">
 
-            <div class="topic_show_notes">
-              <%= render 'partials/topic_notes' %>
-            </div>
-
-          </div>
-
-
-          <div class="card">
-            <div class="ask_bar">
-              <%= render 'partials/question_ask_bar' %>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="question_show_topic_page">
-              <% if @facade.topic_has_questions %>
-              <%= render 'partials/question_show' %>
-              <%else%>
-              <h3>Ask a question and begin exploring!</h3>
-              <%end%>
-            </div>
-          </div>
-
-          <div class="topic_complete_button">
-            <% if @facade.topic_in_progress %>
-            <%= button_to "Research Complete", user_topic_path(@facade.topic), :params => {:topic => { complete: true }},   method: :put, class: 'btn btn-secondary' %>
-            <% else %>
-            <%= button_to "Reopen Research", user_topic_path(@facade.topic), :params => {:topic => { complete: false }},  method: :put, class: 'btn btn-secondary' %>
-            <%end %>
-          </div>
-        </div>
-      </div>
+<div class="topic_body">
+  <div class="topic_header">
+    <div class="learning_about">
+      <p class="headline">Learning about</p>
+      <h1><%=@facade.topic.title%></h1>
+    </div>
+    <div class="goal">
+      <p class="headline">Goal</p>
+      <h1><%=@facade.topic.goal%></h1>
     </div>
   </div>
+
+  <div class="ask_bar">
+    <%= render 'partials/question_ask_bar' %>
+  </div>
+
+  <div class="topic_show_notes">
+    <%= render 'partials/topic_notes' %>
+  </div>
+
+    <div class="question_show_topic_page">
+      <% if @facade.topic_has_questions %>
+      <%= render 'partials/question_show' %>
+      <%else%>
+      <h3>Ask a question and begin exploring!</h3>
+      <%end%>
+    </div>
+
+  <div class="topic_complete_button">
+  <% if @facade.topic_in_progress %>
+    <%= button_to "Research Complete", user_topic_path(@facade.topic), :params => {:topic => { complete: true }}, method: :put, class: 'btn btn-secondary' %>
+  <% else %>
+    <%= button_to "Reopen Research", user_topic_path(@facade.topic), :params => {:topic => { complete: false }}, method: :put, class: 'btn btn-secondary' %>
+  <%end %>
+  </div>
+</div>
+</div>
 </div>
